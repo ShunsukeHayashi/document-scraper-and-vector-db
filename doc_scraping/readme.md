@@ -12,11 +12,15 @@
 ```
 doc_scraping/
 │
+├── .env                   # 環境変数を設定するファイル
 ├── documents.txt          # スクレイピングされたドキュメントを保存するテキストファイル
 ├── vector_database.py     # ベクトルデータベースの構築と管理を行うスクリプト
 ├── run_all.py             # 全体のプロセスを実行するスクリプト
 ├── document_scraper.py    # ウェブページからドキュメントをスクレイピングするスクリプト
 ├── url_tree.txt           # スクレイピングしたURLのツリー構造を保存するファイル
+├── Dockerfile             # Docker環境を構築するためのファイル
+├── docker-compose.yml     # Docker Compose設定ファイル
+├── requirements.txt       # プロジェクトの依存関係を記載したファイル
 └── readme.md              # プロジェクトの説明と使用方法を記載したファイル
 ```
 
@@ -61,7 +65,7 @@ doc_scraping/
 
 ## 注意事項
 
-- OpenAI APIキーを設定する必要があります。`vector_database.py`内の`openai.api_key`にAPIキーを設定してください。
+- OpenAI APIキーを設定する必要があります。`.env`ファイルにAPIキーを設定してください。
 - `openai`ライブラリのバージョンが1.0.0以上であることを確認してください。必要に応じて、`pip install openai --upgrade`を実行してライブラリをアップデートしてください。
 
 ## ライセンス
