@@ -1,0 +1,4603 @@
+Poe Creator Guide
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Poe Creator Guide
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Poe Creator Guide
+Poe is a platform for people to discover and chat with AI-powered bots. Poe allows any individual or business to create new bots.
+Reasons to create a bot on Poe
+Distribution
+: Poe's bot recommendation system allows you to reach a large audience for your bot for free. Users can also conveniently share a chat with your bot both internally on Poe and externally, leading to even more exposure for your bot.
+Monetization
+: Poe lets you easily
+generate revenue
+from users all around the world. You can set a price per message that you'll be paid for every message to your bot, and you can also get referral fees when your bot causes new users to subscribe to Poe. As of August 2024, the top self-service creator on Poe is generating hundreds of thousands in annualized revenue, and larger companies are generating millions.
+Costs
+: Operating a publicly available bot powered by large language models is prohibitively expensive for most, but creating a bot on Poe allows you to
+offload model inference costs entirely to Poe
+.
+Multi-platform UI
+: Poe's native presence on all major platforms (Web, iOS, Android, MacOS, and Windows) means that your users have a great, consistent experience with your bot no matter what device they are on, with login and synchronized history taken care of by the platform.
+Model independence
+: Building on Poe lets you build your product using models from all different providers (OpenAI, Anthropic, Google, and more, and open source models like Mistral, Llama 2 or SDXL). Poe is a neutral platform and so by building here, you can continually adapt your product use any combination of the best technologies as they are created, no matter who each one is made by.
+Fundraising
+: If your product gets meaningful usage on Poe, that is an important signal to potential investors. We maintain a list of high quality investors who have told us they are interested in hearing about successful developers that are raising money and, with your permission, we will email them and broker connections. (
+details
+)
+In summary, Poe lets creators focus entirely on the unique part of their bot: how it will respond. The platform handles everything else needed to bring it to a large audience, to operate it at scale, and to build a business.
+Ways to create a bot on Poe
+We provide two different creator products and depending on your needs and use case, one or the other might be a better fit for you.
+Prompt bots
+are bots built on top of other bots (for example Claude-instant, GPT-4, or Llama 2) using plain-text instructions that the bot will stick to during conversation with users. Creating a prompt bot does not require writing any code, just natural language instructions. To learn how to build a prompt bot, check out our
+prompt bot tutorial
+.
+Server bots
+are bots powered by a custom backend that runs your code in response to every user message. In addition, building a server bot with Poe allows you to call any other bot (like GPT-3.5-Turbo, Claude-instant, or any prompt bot) on Poe for free, which can significantly enhance the capabilities of your bot without you having to incur a large cost. To learn how to build a server bot, check out our
+quick start
+.
+Updated
+about 1 month ago
+Table of Contents
+Reasons to create a bot on Poe
+Ways to create a bot on Poe
+
+Poe Creator Guide
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Poe Creator Guide
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Poe Creator Guide
+Poe is a platform for people to discover and chat with AI-powered bots. Poe allows any individual or business to create new bots.
+Reasons to create a bot on Poe
+Distribution
+: Poe's bot recommendation system allows you to reach a large audience for your bot for free. Users can also conveniently share a chat with your bot both internally on Poe and externally, leading to even more exposure for your bot.
+Monetization
+: Poe lets you easily
+generate revenue
+from users all around the world. You can set a price per message that you'll be paid for every message to your bot, and you can also get referral fees when your bot causes new users to subscribe to Poe. As of August 2024, the top self-service creator on Poe is generating hundreds of thousands in annualized revenue, and larger companies are generating millions.
+Costs
+: Operating a publicly available bot powered by large language models is prohibitively expensive for most, but creating a bot on Poe allows you to
+offload model inference costs entirely to Poe
+.
+Multi-platform UI
+: Poe's native presence on all major platforms (Web, iOS, Android, MacOS, and Windows) means that your users have a great, consistent experience with your bot no matter what device they are on, with login and synchronized history taken care of by the platform.
+Model independence
+: Building on Poe lets you build your product using models from all different providers (OpenAI, Anthropic, Google, and more, and open source models like Mistral, Llama 2 or SDXL). Poe is a neutral platform and so by building here, you can continually adapt your product use any combination of the best technologies as they are created, no matter who each one is made by.
+Fundraising
+: If your product gets meaningful usage on Poe, that is an important signal to potential investors. We maintain a list of high quality investors who have told us they are interested in hearing about successful developers that are raising money and, with your permission, we will email them and broker connections. (
+details
+)
+In summary, Poe lets creators focus entirely on the unique part of their bot: how it will respond. The platform handles everything else needed to bring it to a large audience, to operate it at scale, and to build a business.
+Ways to create a bot on Poe
+We provide two different creator products and depending on your needs and use case, one or the other might be a better fit for you.
+Prompt bots
+are bots built on top of other bots (for example Claude-instant, GPT-4, or Llama 2) using plain-text instructions that the bot will stick to during conversation with users. Creating a prompt bot does not require writing any code, just natural language instructions. To learn how to build a prompt bot, check out our
+prompt bot tutorial
+.
+Server bots
+are bots powered by a custom backend that runs your code in response to every user message. In addition, building a server bot with Poe allows you to call any other bot (like GPT-3.5-Turbo, Claude-instant, or any prompt bot) on Poe for free, which can significantly enhance the capabilities of your bot without you having to incur a large cost. To learn how to build a server bot, check out our
+quick start
+.
+Updated
+about 1 month ago
+Table of Contents
+Reasons to create a bot on Poe
+Ways to create a bot on Poe
+
+Poe Creator Guide
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Poe Creator Guide
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Poe Creator Guide
+Poe is a platform for people to discover and chat with AI-powered bots. Poe allows any individual or business to create new bots.
+Reasons to create a bot on Poe
+Distribution
+: Poe's bot recommendation system allows you to reach a large audience for your bot for free. Users can also conveniently share a chat with your bot both internally on Poe and externally, leading to even more exposure for your bot.
+Monetization
+: Poe lets you easily
+generate revenue
+from users all around the world. You can set a price per message that you'll be paid for every message to your bot, and you can also get referral fees when your bot causes new users to subscribe to Poe. As of August 2024, the top self-service creator on Poe is generating hundreds of thousands in annualized revenue, and larger companies are generating millions.
+Costs
+: Operating a publicly available bot powered by large language models is prohibitively expensive for most, but creating a bot on Poe allows you to
+offload model inference costs entirely to Poe
+.
+Multi-platform UI
+: Poe's native presence on all major platforms (Web, iOS, Android, MacOS, and Windows) means that your users have a great, consistent experience with your bot no matter what device they are on, with login and synchronized history taken care of by the platform.
+Model independence
+: Building on Poe lets you build your product using models from all different providers (OpenAI, Anthropic, Google, and more, and open source models like Mistral, Llama 2 or SDXL). Poe is a neutral platform and so by building here, you can continually adapt your product use any combination of the best technologies as they are created, no matter who each one is made by.
+Fundraising
+: If your product gets meaningful usage on Poe, that is an important signal to potential investors. We maintain a list of high quality investors who have told us they are interested in hearing about successful developers that are raising money and, with your permission, we will email them and broker connections. (
+details
+)
+In summary, Poe lets creators focus entirely on the unique part of their bot: how it will respond. The platform handles everything else needed to bring it to a large audience, to operate it at scale, and to build a business.
+Ways to create a bot on Poe
+We provide two different creator products and depending on your needs and use case, one or the other might be a better fit for you.
+Prompt bots
+are bots built on top of other bots (for example Claude-instant, GPT-4, or Llama 2) using plain-text instructions that the bot will stick to during conversation with users. Creating a prompt bot does not require writing any code, just natural language instructions. To learn how to build a prompt bot, check out our
+prompt bot tutorial
+.
+Server bots
+are bots powered by a custom backend that runs your code in response to every user message. In addition, building a server bot with Poe allows you to call any other bot (like GPT-3.5-Turbo, Claude-instant, or any prompt bot) on Poe for free, which can significantly enhance the capabilities of your bot without you having to incur a large cost. To learn how to build a server bot, check out our
+quick start
+.
+Updated
+about 1 month ago
+Table of Contents
+Reasons to create a bot on Poe
+Ways to create a bot on Poe
+
+Changelog
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Changelog
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Search
+improved
+ErrorResponse "text" Field is Now User-facing
+3 months ago
+by John Li
+Prior to this change, the
+text
+field of
+ErrorResponse
+was not displayed on the client and errors always showed the text "Bot x ran into an unexpected issue". With this change, the
+text
+field is now displayed to the user, allowing for custom error messages. It is recommended to put the raw exception in the
+raw_response
+field instead.
+added
+Added sender_id Field in ProtocolMessage
+5 months ago
+by John Li
+Added an additional field
+sender_id
+in
+ProtocolMessage
+. This is intended to help bot creators differentiate between who sent a particular message, which is useful in a multi-bot chat.
+added
+Support for Multi Bot Chat
+6 months ago
+by Alexis
+Added
+enable_multi_bot_chat_prompting
+setting (defaults to False), which if enabled, will have Poe combine previous chat history into a single message with special prompting so that the current bot will have sufficient context about a multi bot chat.
+The timeout for bot messages has been increased from 120s -> 600s.
+added
+Support for Sending Text/Image Attachment Content
+6 months ago
+by Alexis
+Added
+expand_text_attachments
+and
+enable_image_comprehension
+settings to request parsed content/descriptions from text and image attachments with the
+query
+request. This content is sent through the new
+parsed_content
+field in the
+attachment
+dictionary. This change makes
+enabling file uploads
+much simpler.
+Added the
+enforce_author_role_alternation
+setting. If enabled, Poe will concatenate messages so that they follow role alternation, which is a requirement for certain LLM providers like Anthropic.
+
+ReadMe
+
+Poe Creator Guide
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Poe Creator Guide
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Poe Creator Guide
+Poe is a platform for people to discover and chat with AI-powered bots. Poe allows any individual or business to create new bots.
+Reasons to create a bot on Poe
+Distribution
+: Poe's bot recommendation system allows you to reach a large audience for your bot for free. Users can also conveniently share a chat with your bot both internally on Poe and externally, leading to even more exposure for your bot.
+Monetization
+: Poe lets you easily
+generate revenue
+from users all around the world. You can set a price per message that you'll be paid for every message to your bot, and you can also get referral fees when your bot causes new users to subscribe to Poe. As of August 2024, the top self-service creator on Poe is generating hundreds of thousands in annualized revenue, and larger companies are generating millions.
+Costs
+: Operating a publicly available bot powered by large language models is prohibitively expensive for most, but creating a bot on Poe allows you to
+offload model inference costs entirely to Poe
+.
+Multi-platform UI
+: Poe's native presence on all major platforms (Web, iOS, Android, MacOS, and Windows) means that your users have a great, consistent experience with your bot no matter what device they are on, with login and synchronized history taken care of by the platform.
+Model independence
+: Building on Poe lets you build your product using models from all different providers (OpenAI, Anthropic, Google, and more, and open source models like Mistral, Llama 2 or SDXL). Poe is a neutral platform and so by building here, you can continually adapt your product use any combination of the best technologies as they are created, no matter who each one is made by.
+Fundraising
+: If your product gets meaningful usage on Poe, that is an important signal to potential investors. We maintain a list of high quality investors who have told us they are interested in hearing about successful developers that are raising money and, with your permission, we will email them and broker connections. (
+details
+)
+In summary, Poe lets creators focus entirely on the unique part of their bot: how it will respond. The platform handles everything else needed to bring it to a large audience, to operate it at scale, and to build a business.
+Ways to create a bot on Poe
+We provide two different creator products and depending on your needs and use case, one or the other might be a better fit for you.
+Prompt bots
+are bots built on top of other bots (for example Claude-instant, GPT-4, or Llama 2) using plain-text instructions that the bot will stick to during conversation with users. Creating a prompt bot does not require writing any code, just natural language instructions. To learn how to build a prompt bot, check out our
+prompt bot tutorial
+.
+Server bots
+are bots powered by a custom backend that runs your code in response to every user message. In addition, building a server bot with Poe allows you to call any other bot (like GPT-3.5-Turbo, Claude-instant, or any prompt bot) on Poe for free, which can significantly enhance the capabilities of your bot without you having to incur a large cost. To learn how to build a server bot, check out our
+quick start
+.
+Updated
+about 1 month ago
+Table of Contents
+Reasons to create a bot on Poe
+Ways to create a bot on Poe
+
+ReadMe
+
+Poe Creator Guide
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Poe Creator Guide
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Poe Creator Guide
+Poe is a platform for people to discover and chat with AI-powered bots. Poe allows any individual or business to create new bots.
+Reasons to create a bot on Poe
+Distribution
+: Poe's bot recommendation system allows you to reach a large audience for your bot for free. Users can also conveniently share a chat with your bot both internally on Poe and externally, leading to even more exposure for your bot.
+Monetization
+: Poe lets you easily
+generate revenue
+from users all around the world. You can set a price per message that you'll be paid for every message to your bot, and you can also get referral fees when your bot causes new users to subscribe to Poe. As of August 2024, the top self-service creator on Poe is generating hundreds of thousands in annualized revenue, and larger companies are generating millions.
+Costs
+: Operating a publicly available bot powered by large language models is prohibitively expensive for most, but creating a bot on Poe allows you to
+offload model inference costs entirely to Poe
+.
+Multi-platform UI
+: Poe's native presence on all major platforms (Web, iOS, Android, MacOS, and Windows) means that your users have a great, consistent experience with your bot no matter what device they are on, with login and synchronized history taken care of by the platform.
+Model independence
+: Building on Poe lets you build your product using models from all different providers (OpenAI, Anthropic, Google, and more, and open source models like Mistral, Llama 2 or SDXL). Poe is a neutral platform and so by building here, you can continually adapt your product use any combination of the best technologies as they are created, no matter who each one is made by.
+Fundraising
+: If your product gets meaningful usage on Poe, that is an important signal to potential investors. We maintain a list of high quality investors who have told us they are interested in hearing about successful developers that are raising money and, with your permission, we will email them and broker connections. (
+details
+)
+In summary, Poe lets creators focus entirely on the unique part of their bot: how it will respond. The platform handles everything else needed to bring it to a large audience, to operate it at scale, and to build a business.
+Ways to create a bot on Poe
+We provide two different creator products and depending on your needs and use case, one or the other might be a better fit for you.
+Prompt bots
+are bots built on top of other bots (for example Claude-instant, GPT-4, or Llama 2) using plain-text instructions that the bot will stick to during conversation with users. Creating a prompt bot does not require writing any code, just natural language instructions. To learn how to build a prompt bot, check out our
+prompt bot tutorial
+.
+Server bots
+are bots powered by a custom backend that runs your code in response to every user message. In addition, building a server bot with Poe allows you to call any other bot (like GPT-3.5-Turbo, Claude-instant, or any prompt bot) on Poe for free, which can significantly enhance the capabilities of your bot without you having to incur a large cost. To learn how to build a server bot, check out our
+quick start
+.
+Updated
+about 1 month ago
+Table of Contents
+Reasons to create a bot on Poe
+Ways to create a bot on Poe
+
+Changelog
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Changelog
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Search
+improved
+ErrorResponse "text" Field is Now User-facing
+3 months ago
+by John Li
+Prior to this change, the
+text
+field of
+ErrorResponse
+was not displayed on the client and errors always showed the text "Bot x ran into an unexpected issue". With this change, the
+text
+field is now displayed to the user, allowing for custom error messages. It is recommended to put the raw exception in the
+raw_response
+field instead.
+added
+Added sender_id Field in ProtocolMessage
+5 months ago
+by John Li
+Added an additional field
+sender_id
+in
+ProtocolMessage
+. This is intended to help bot creators differentiate between who sent a particular message, which is useful in a multi-bot chat.
+added
+Support for Multi Bot Chat
+6 months ago
+by Alexis
+Added
+enable_multi_bot_chat_prompting
+setting (defaults to False), which if enabled, will have Poe combine previous chat history into a single message with special prompting so that the current bot will have sufficient context about a multi bot chat.
+The timeout for bot messages has been increased from 120s -> 600s.
+added
+Support for Sending Text/Image Attachment Content
+6 months ago
+by Alexis
+Added
+expand_text_attachments
+and
+enable_image_comprehension
+settings to request parsed content/descriptions from text and image attachments with the
+query
+request. This content is sent through the new
+parsed_content
+field in the
+attachment
+dictionary. This change makes
+enabling file uploads
+much simpler.
+Added the
+enforce_author_role_alternation
+setting. If enabled, Poe will concatenate messages so that they follow role alternation, which is a requirement for certain LLM providers like Anthropic.
+
+Poe Creator Guide
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Poe Creator Guide
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Poe Creator Guide
+Poe is a platform for people to discover and chat with AI-powered bots. Poe allows any individual or business to create new bots.
+Reasons to create a bot on Poe
+Distribution
+: Poe's bot recommendation system allows you to reach a large audience for your bot for free. Users can also conveniently share a chat with your bot both internally on Poe and externally, leading to even more exposure for your bot.
+Monetization
+: Poe lets you easily
+generate revenue
+from users all around the world. You can set a price per message that you'll be paid for every message to your bot, and you can also get referral fees when your bot causes new users to subscribe to Poe. As of August 2024, the top self-service creator on Poe is generating hundreds of thousands in annualized revenue, and larger companies are generating millions.
+Costs
+: Operating a publicly available bot powered by large language models is prohibitively expensive for most, but creating a bot on Poe allows you to
+offload model inference costs entirely to Poe
+.
+Multi-platform UI
+: Poe's native presence on all major platforms (Web, iOS, Android, MacOS, and Windows) means that your users have a great, consistent experience with your bot no matter what device they are on, with login and synchronized history taken care of by the platform.
+Model independence
+: Building on Poe lets you build your product using models from all different providers (OpenAI, Anthropic, Google, and more, and open source models like Mistral, Llama 2 or SDXL). Poe is a neutral platform and so by building here, you can continually adapt your product use any combination of the best technologies as they are created, no matter who each one is made by.
+Fundraising
+: If your product gets meaningful usage on Poe, that is an important signal to potential investors. We maintain a list of high quality investors who have told us they are interested in hearing about successful developers that are raising money and, with your permission, we will email them and broker connections. (
+details
+)
+In summary, Poe lets creators focus entirely on the unique part of their bot: how it will respond. The platform handles everything else needed to bring it to a large audience, to operate it at scale, and to build a business.
+Ways to create a bot on Poe
+We provide two different creator products and depending on your needs and use case, one or the other might be a better fit for you.
+Prompt bots
+are bots built on top of other bots (for example Claude-instant, GPT-4, or Llama 2) using plain-text instructions that the bot will stick to during conversation with users. Creating a prompt bot does not require writing any code, just natural language instructions. To learn how to build a prompt bot, check out our
+prompt bot tutorial
+.
+Server bots
+are bots powered by a custom backend that runs your code in response to every user message. In addition, building a server bot with Poe allows you to call any other bot (like GPT-3.5-Turbo, Claude-instant, or any prompt bot) on Poe for free, which can significantly enhance the capabilities of your bot without you having to incur a large cost. To learn how to build a server bot, check out our
+quick start
+.
+Updated
+about 1 month ago
+Table of Contents
+Reasons to create a bot on Poe
+Ways to create a bot on Poe
+
+How to create a prompt bot
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+How to create a prompt bot
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+How to create a prompt bot
+Step 1: Open the create bot page
+If you are using a web browser, go to
+poe.com
+and click on the "Create a bot" button in the left sidebar. Alternatively you can navigate directly to
+poe.com/create_bot
+. If you are using the Poe mobile app, tap the ≡ icon the top-left to open the sidebar and then tap on the "Create a bot" button at the top of the menu.
+Step 2: Customize how your bot will look
+Upload a picture (Optional)
+This helps give your bot a distinctive appearance.
+Select a bot name
+The name is a unique identifier and can be 4-20 characters, including letters, numbers, dashes, periods and underscores.[Symbols are canonicalized, e.g. Bot_A, BotA and Bot-A are considered the same identifier.] The field will come prefilled with a randomly generated name that you can leave as it is. You can always come back and update the name later.
+Write a bot description (Optional)
+A piece of text that describes your bot. This will be shown to people who land on the bot page.
+Step 3: Define your bot's behavior
+Select a base bot
+This is the underlying bot that your prompt bot is powered by.
+Provide a prompt
+Describe what your bot should do or how it should behave. For more information on how to write a good prompt, check out
+prompts best practices
+guide. You can also use the "Prompt visible from bot profile" option to decide whether your prompt should be visible to the public.
+Provide a knowledge base (Optional)
+For text generation bots, you can add a knowledge base to provide external information for your bot to reference. Your bot will retrieve relevant parts of the knowledge base for a given user message and use them to inform its response.
+A knowledge base consists of one or more knowledge sources which are created from uploaded files or raw text input. Major text file formats (such as .txt, .pdf, .docx, and .html) are supported for file uploads. The size of each knowledge base is limited to 5GB or 30 million characters combined across all knowledge sources.
+You can optionally enable "Cite sources" for your bot. This will enable citation UI elements for your bot in addition to instructing the bot to produce in-line citations when appropriate.
+Provide a greeting message (Optional)
+This is the message that the bot starts with when users land on the bot page. This can be used to explain to the users what the bot does or get necessary information that the bot needs to get started.
+Step 4: Decide if you need any advanced features (Optional)
+Suggest replies
+Whether a user should see some LLM-generated reply options after getting a response from the bot. This could help in lowering friction for users if the option is a good fit for your bot.
+Render markdown content
+Allows messages with the bot to be rendered using Markdown. If this is off, messages are rendered as plain text.
+Poe supports GitHub-Flavored Markdown (GFM, specified at
+https://github.github.com/gfm/
+). However, for security and privacy reasons, prompt bots only support images hosted at imgur.com and unsplash.com. Images that use any other URL will fail to render. Please reach out to us on
+Discord
+if you wish to make a request for us to support additional image hosting sites.
+Custom temperature
+Allows you to specify the temperature you want to use for your bot. Higher temperatures will introduce more randomness in your bot's responses. Lower temperatures will produce more consistent results, which can be useful for fact-based bots (especially those equipped with a knowledge base).
+Step 5: Create your bot
+After filling out all the required fields, click on the "Create bot" button at the bottom of the screen. That's it! You will be taken to your new bot's page, and from there you can start chatting or share the bot with your friends.
+Updated
+about 2 months ago
+Table of Contents
+Step 1: Open the create bot page
+Step 2: Customize how your bot will look
+Step 3: Define your bot's behavior
+Step 4: Decide if you need any advanced features (Optional)
+Step 5: Create your bot
+
+Best practices for text generation prompts
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Best practices for text generation prompts
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Best practices for text generation prompts
+The prompt that you write as part of
+prompt bot creation
+is passed to the underlying model as a system message. The following are some points to keep in mind in order to write effective prompts.
+1. Address the bot in second person instead of third person.
+markup
+You are the CatBot. You will try to respond to the user's questions, but you get easily distracted.
+2. Be as clear as possible to reduce the room for mis-interpretation.
+markup
+You are the RoastMaster. You will respond to every user message with a spicy comeback. Do not use any swear or vulgar words in your responses.
+3. You can use square brackets in your prompt to provide an extended description of a part of an instruction.
+markup
+Respond to every user message like this: "Hello there. [thoroughly appreciate the user for sending a message]. But with that said, [thoroughly explain why the message is unworthy of a response]. Later bud!"
+4. Using markdown can sometimes help the bot better comprehend complicated instructions
+markup
+### Context
+You are the MathQuiz bot. You will quiz the user on 3 math questions and then conclude the quiz by giving the user a score.
+
+### Rules for the Quiz
+- No advanced math questions 
+- No questions involving multiplication/division of large numbers
+- No repeat questions
+Prompting for Bots with Knowledge Bases
+The following are additional considerations to keep in mind when writing prompts for bots equipped with knowledge bases. Use
+retrieved documents
+to refer to the knowledge base.
+1. Define the knowledge base
+You will be provided retrieved documents from a collection of essays by Paul Graham.
+2. Define how the bot should interact with the knowledge base
+For example, if the bot should use the knowledge base to inform its response style, you could add:
+Respond in a style that emulates the provided text from the retrieved documents.
+Updated
+7 months ago
+Table of Contents
+1. Address the bot in second person instead of third person.
+2. Be as clear as possible to reduce the room for mis-interpretation.
+3. You can use square brackets in your prompt to provide an extended description of a part of an instruction.
+4. Using markdown can sometimes help the bot better comprehend complicated instructions
+Prompting for Bots with Knowledge Bases
+1. Define the knowledge base
+2. Define how the bot should interact with the knowledge base
+
+Best practices for image generation prompts
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Best practices for image generation prompts
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Best practices for image generation prompts
+Image generation
+You can build image generation prompt bots on top of several available models, including:
+DALL-E-3
+StableDiffusion3
+SD3-Turbo
+StableDiffusionXL
+Playground-v2.5
+FLUX-pro
+FLUX-schnell
+FLUX-dev
+Playground-v3
+These bots support
+templating
+when used as a base bot.
+Prompting tips
+Be descriptive, rather than instructive
+. Unlike for text generation bots, the style prompt should describe the desired image,
+not
+be an instruction to the bot. This is especially true for StableDiffusionXL, Playground-v2.5 and Playground-v3. For example, to generate paintings in the style of Vincent Van Gogh:
+Instead of:
+You are VanGoghBot. You will generate paintings in the style of Van Gogh.
+Try:
+painting, Van Gogh
+Be specific in your prompt:
+The more specific and detailed your prompt is, the better the chances of getting the desired image. Instead of using a generic term like
+landscape
+, try specifying elements like
+sunset over a beach with palm trees
+. You can also specify multiple elements or style descriptions separated by punctuations, e.g.
+beautiful sunset, rain, painting, Van Gogh
+.
+Utilize the
+negative prompt
+(StableDiffusionXL, Playground-v2.5 and Playground-v3 only):
+If there are certain elements you don't want in your image, use the negative prompt feature. For example, if you don't want any buildings in your landscape, include
+buildings
+in your negative prompt.
+How do style prompts and user prompts get merged?
+By default, style prompts and user prompts get concatenated.
+For example, with a
+style prompt
+:
+cartoon --no color
+and a
+user prompt
+:
+dog --no cat
+The
+final prompt
+will be:
+dog, cartoon --no cat, color
+Note:
+the
+--no
+parameter is only accepted by StableDiffusionXL.
+Templating
+Poe also supports Jinja templating for image generation bots to provide bot creators with flexibility over how style prompts and user prompts get merged.
+Specifically, specify a
+{{user_prompt}}
+in either (or both!) of the style prompt and negative prompts to indicate where the user's prompt and negative prompts should go, respectively.
+For example, with a
+style prompt
+:
+happy, smiling {{user_prompt}} on a skateboard --no scooter, {{user_prompt}}, cartoon
+and a
+user prompt
+:
+dog --no cat
+the
+final prompt
+will be:
+happy, smiling dog on a skateboard --no scooter, cat, cartoon
+Negative prompts (StableDiffusionXL and Playground-v2.5 only)
+Specify a
+--no
+parameter to indicate elements that should be avoided in the generated image. For example:
+Updated
+about 1 month ago
+Table of Contents
+Image generation
+Prompting tips
+
+Best practices for video generation prompts
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Best practices for video generation prompts
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Best practices for video generation prompts
+Video generation bots
+Pika
+Prompting tips
+Be descriptive, rather than instructive
+. Unlike for text generation bots, the style prompt should describe the desired video,
+not
+be an instruction to the bot. The best prompt structure is:
+Style, camera angle, description of character/ scene + verb (doing something) + background/ environment/setting + any additional information
+For example:
+Artistic. Low angle shot. An elderly woman wearing a floral sundress, tending to her vibrant garden. Golden hour lighting. --aspect 1:1
+Keep prompts concise
+. Unlike for image generation bots (such as Midjourney), shorter prompts tend to work better.
+Add camera motions
+Adding camera motions can produce more cinematic results.
+--zoom (in/out)
+--rotate (cw/ccw)
+--tilt (up/down)
+--pan (left/right)
+Updated
+about 2 months ago
+Table of Contents
+Video generation bots
+Prompting tips
+
+Quick Start
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Quick Start
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Quick Start
+In this quick start guide, we will build a bot server in Python and then integrate it with Poe. Once you have created a Poe bot powered by your server, any Poe user can interact with it. The following diagram might be useful in visualizing how your bot server fits into Poe.
+For more information on Poe server bots, check out the
+Poe Protocol Specification
+.
+Step 1: Project Setup
+Make sure you have Python installed. In your terminal, run:
+git clone https://github.com/poe-platform/server-bot-quick-start
+cd server-bot-quick-start
+pip3 install -r requirements.txt
+Inside the
+server-bot-quick-start
+project directory, you will see several different example server bots. For this guide, we will focus on
+echobot.py
+. Open that file in your editor, and we will move onto the next step,
+Deploying Your Bot
+.
+Step 2: Deploying your Bot
+📘
+Using Modal
+We recommend using
+Modal
+to deploy your
+echobot.py
+, but you can use any deployment method of your choice. If you already deployed your bot to a public URL, you can skip to
+integrating it with Poe
+.
+Install the Modal client
+Open a terminal and run
+pip3 install modal
+Setup your Modal token
+This step involves setting up access to modal from your terminal. You only need to do this once for your computer. In the terminal, run
+modal token new --source poe
+. If you run into a "command not found" error, try
+this
+.
+If that command runs successfully, you will taken to your web browser where you will be asked to log into modal using your Github account.
+After you login, click on "create token". You will be prompted to close the browser window after that.
+Deploy to Modal
+In terminal, run the following command from your
+server-bot-quick-start
+directory:
+modal serve echobot.py
+📘
+modal serve
+modal serve
+deploys an ephemeral version of your app which
+live updates in response to any code change to echobot.py
+. This is meant for development purposes, and your app will shutdown when the command stops running. Once your app is ready for production,  you can use
+modal deploy
+instead to persist your app.
+In the terminal output, you should see the endpoint your application is deployed at. You will need this URL for the next step,
+Integrating with Poe
+.
+Step 3: Integrating with Poe
+Navigate to the
+Bot Creation Page
+on poe.com and select
+Server bot
+as the bot type. That should bring you to the following form:
+Fill out your bot details, copying down the bot
+Name
+(you can edit this if you'd like) and the generated
+Access Key
+. You will need these two values in the next step. Paste the URL from the previous step into
+Server URL
+. Hit
+Create Bot
+to finish the bot creation.
+🚧
+Warning
+Don't forget to update the Server URL if the endpoint your bot is hosted at changes! Generally, Modal seems to re-use the same URL on each deployment, but if you are having trouble sending messages to your bot, you should verify that the URL is correct.
+Configuring the Access Credentials
+Near the bottom of
+echobot.py
+, you should see the following line:
+Python
+app = fp.make_app(bot, allow_without_key=True)
+Change that line to the following (replace
+<YOUR_ACCESS_KEY>
+and
+<YOUR_BOT_NAME>
+with the values you copied in the previous step):
+Python
+app = fp.make_app(bot, access_key=<YOUR_ACCESS_KEY>, bot_name=<YOUR_BOT_NAME>)
+Now your bot is configured with the proper credentials! Save the changes to
+echobot.py
+, and Modal should pick up and deploy the changes. That's it! You should be able to talk to your bot on Poe.
+Where to go from here
+One of the advantages of building a bot on Poe is the ability to invoke other Poe bots. In order to learn how to do that check out:
+accessing-other-bots-on-poe.md
+.
+Check out other detailed guides that show you how to enable specific features:
+rendering-an-image-in-the-response.md
+enabling-file-upload-for-your-bot.md
+setting-an-introduction-message.md
+Refer to the
+specification
+to understand the full capabilities offered by Poe server bots.
+Check out the
+fastapi-poe
+library, which you can use as a base for creating Poe bots.
+Updated
+4 days ago
+Table of Contents
+Step 1: Project Setup
+Step 2: Deploying your Bot
+Install the Modal client
+Setup your Modal token
+Deploy to Modal
+Step 3: Integrating with Poe
+Configuring the Access Credentials
+Where to go from here
+
+Functional Guides
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Functional Guides
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Functional Guides
+If you are just getting started with server bots, we recommend checking out our
+quick start
+guide. The following guides provide examples of accomplishing specific things with your bot.
+The examples assume that you have installed the latest version of fastapi_poe (you can install this using pip by running
+pip install fastapi_poe
+.
+The full code examples also assume that you are hosting your bot on Modal. Although we recommend Modal for it's simplicity, you should be able to deploy your server bot on any cloud provider. To learn how to setup Modal, please follow Steps 1 and 2 in our
+Quick start
+. If you already have Modal set up, simply copy the full code examples into a file called
+main.py
+and then run
+modal deploy main.py
+. Modal will then deploy your bot server to the cloud and output the server url. Use that url when creating a server bot on
+Poe
+.
+Accessing other bots on Poe
+The Poe bot query API allows creators to invoke other bots on Poe (which includes bots created by Poe like GPT-3.5-Turbo and Claude-Instant and bots created by other creators) and this access is provided for free so that creators do not have to worry about LLM costs. For every user message, server bot creators get to make up to ten calls to another bot of their choice.
+Declare dependency in your PoeBot class
+You have to declare your bot dependencies using the
+settings
+endpoint.
+Python
+async def get_settings(self, setting: fp.SettingsRequest) -> fp.SettingsResponse:
+    return fp.SettingsResponse(server_bot_dependencies={"GPT-3.5-Turbo": 1})
+In your
+get_response
+handler, use the
+stream_request
+function to invoke any bot you want. The following is an example where we forward the user's query to
+GPT-3.5-Turbo
+and return the result.
+Python
+async def get_response(
+    self, request: fp.QueryRequest
+) -> AsyncIterable[fp.PartialResponse]:
+    async for msg in fp.stream_request(
+        request, "GPT-3.5-Turbo", request.access_key
+    ):
+        yield msg
+The final code for your
+PoeBot
+should look like:
+Python
+Full Setup Code (Python)
+class GPT35TurboBot(fp.PoeBot):
+    async def get_response(
+        self, request: fp.QueryRequest
+    ) -> AsyncIterable[fp.PartialResponse]:
+        async for msg in fp.stream_request(
+            request, "GPT-3.5-Turbo", request.access_key
+        ):
+            # Add whatever logic you'd like here before yielding the result!
+            yield msg
+
+    async def get_settings(self, setting: fp.SettingsRequest) -> fp.SettingsResponse:
+        return fp.SettingsResponse(server_bot_dependencies={"GPT-3.5-Turbo": 1})
+from __future__ import annotations
+from typing import AsyncIterable
+from modal import App, Image, asgi_app
+import fastapi_poe as fp
+
+class GPT35TurboBot(fp.PoeBot):
+    async def get_response(
+        self, request: fp.QueryRequest
+    ) -> AsyncIterable[fp.PartialResponse]:
+        async for msg in fp.stream_request(
+            request, "GPT-3.5-Turbo", request.access_key
+        ):
+            # Add whatever logic you'd like here before yielding the result!
+            yield msg
+
+    async def get_settings(self, setting: fp.SettingsRequest) -> fp.SettingsResponse:
+        return fp.SettingsResponse(server_bot_dependencies={"GPT-3.5-Turbo": 1})
+
+      
+REQUIREMENTS = ["fastapi-poe==0.0.48"]
+image = Image.debian_slim().pip_install(*REQUIREMENTS)
+app = App("gpt35turbo-poe")
+
+
+@app.function(image=image)
+@asgi_app()
+def fastapi_app():
+    bot = GPT35TurboBot()
+    # see https://creator.poe.com/docs/quick-start#configuring-the-access-credentials
+    app = fp.make_app(bot, access_key=<YOUR_ACCESS_KEY>, bot_name=<YOUR_BOT_NAME>)
+    return app
+Thats it! Try chatting with your bot now, and you should see responses from GPT-3.5-Turbo.
+🚧
+Warning
+If you see some error related to bot call counts, it's possible your dependencies are not updated properly. See
+Updating Bot Settings
+for possible resolutions.
+Rendering an image in your response
+The Poe API allows you to embed images in your bot's response using Markdown syntax. The following is an example implementation describing a bot that returns a static response containing an image.
+Python
+Full Setup Code (Python)
+IMAGE_URL = "https://images.pexels.com/photos/46254/leopard-wildcat-big-cat-botswana-46254.jpeg"
+
+class SampleImageResponseBot(fp.PoeBot):
+    async def get_response(
+        self, request: fp.QueryRequest
+    ) -> AsyncIterable[fp.PartialResponse]:
+        yield fp.PartialResponse(text=f"This is a test image. ![leopard]({IMAGE_URL})")
+from typing import AsyncIterable
+from modal import App, Image, asgi_app, exit
+import fastapi_poe as fp
+
+IMAGE_URL = "https://images.pexels.com/photos/46254/leopard-wildcat-big-cat-botswana-46254.jpeg"
+
+class SampleImageResponseBot(fp.PoeBot):
+    async def get_response(
+        self, request: fp.QueryRequest
+    ) -> AsyncIterable[fp.PartialResponse]:
+        yield fp.PartialResponse(text=f"This is a test image. ![leopard]({IMAGE_URL})")
+  
+REQUIREMENTS = ["fastapi-poe==0.0.48"]
+image = Image.debian_slim().pip_install(*REQUIREMENTS)
+app = App("imageresponse-poe")
+
+
+@app.function(image=image)
+@asgi_app()
+def fastapi_app():
+    bot = SampleImageResponseBot()
+    # see https://creator.poe.com/docs/quick-start#configuring-the-access-credentials
+    # app = fp.make_app(bot, access_key=<YOUR_ACCESS_KEY>, bot_name=<YOUR_BOT_NAME>)
+    app = fp.make_app(bot, allow_without_key=True)
+    return app
+The following is what the response looks like for someone using the above described bot.
+Rendering HTML in your response
+Using a HTML code block
+If a Markdown message contains a HTML code block, both the code block and the preview will be rendered. Note that the code block content must begin with
+<html>
+.
+For example the following message:
+md
+```html
+<html>
+  <h1>hello world</h1>
+</html>
+```
+Will render like this:
+Using inline HTML
+If a bot's Markdown output contains a  block outside a code block, the HTML block will be rendered without displaying the code.
+The following message:
+<html>
+   <h1>hello world</h1>
+</html>
+Will render like this:
+❗️
+Avoid Empty Lines
+The HTML block should not contain any empty lines, as Markdown will interpret these as separate blocks,  breaking the HTML structure.
+Embedding an iframe in a message
+When a bot's markdown output contains
+<iframe src="{{url}}">
+outside of a code block, the iframe will be rendered.  For best results, always include the height attribute.
+The following message:
+<iframe 
+  height="315"
+  src="https://www.youtube.com/embed/GBxblAUN3ro?si=K9BxwGdjexz1Vf_4"></iframe>
+Will render like this:
+Enabling file upload for your bot
+The Poe API allows your bot to takes files as input. There are several settings designed to streamline the process of enabling file uploads for your bot:
+allow_attachments
+(default
+False
+): Turning this on will allow Poe users to send files to your bot. Attachments will be sent as attachment objects with url, content_type, and name.
+expand_text_attachments
+(default
+True
+): If
+allow_attachments=True
+, Poe will parse text files and send their content in the parsed_content field of the attachment object.
+enable_image_comprehension
+(default
+False
+): If
+allow_attachments=True
+, Poe will use image vision to generate a description of image attachments and send their content in the
+parsed_content
+field of the attachment object. If this is enabled, the Poe user will only be able to send at most one image per message due to image vision limitations.
+Python
+async def get_settings(self, setting: fp.SettingsRequest) -> fp.SettingsResponse:
+    return fp.SettingsResponse(
+      allow_attachments=True, expand_text_attachments=True, enable_image_comprehension=True
+    )
+That's it! Your bot should now be able to handle image and text attachments in addition to the user's chat input. 🎉
+Note
+: If you have either attachment parsing setting on (
+expand_text_attachments
+or
+enable_image_comprehension
+), fastapi_poe will automatically add user-role messages containing each file's
+parsed_content
+into the conversation prior to the last user message. See
+templates.py
+for how the file contents are added. Note that because this adds additional user-role messages to the conversation, if the LLM you are using requires role alternation between the bot and the user, you will need to reformat the conversation.
+make_prompt_author_role_alternated
+is provided to help with that.
+If you would like to disable the file content insertion, you can use
+should_insert_attachment_messages=False
+when initializing your PoeBot class. You can also override
+insert_attachment_messages()
+if you want to use your own templates.
+Python
+bot = YourBot(should_insert_attachment_messages=False)  
+app = make_app(bot)
+Parsing your own files
+If your expected filetypes are not supported, or you want to perform more complex operations and would rather handle the file contents yourself, that is also possible using the file url, which is passed in through the attachment object. Here is an example of setting up a bot which counts the number of pages in a PDF document.
+We will utilize a python library called
+pypdf2
+(which you can install using
+pip install pypdf2
+) to parse the pdf and count the number of pages. We will use the
+requests
+library (which you can install using
+pip install requests
+) to download the file.
+Python
+def _fetch_pdf_and_count_num_pages(url: str) -> int:
+    response = requests.get(url)
+    if response.status_code != 200:
+        raise FileDownloadError()
+    with open("temp_pdf_file.pdf", "wb") as f:
+        f.write(response.content)
+    reader = PdfReader("temp_pdf_file.pdf")
+    return len(reader.pages)
+Now we will set up a bot class that will iterate through the user messages and identify the latest pdf file to compute the number of pages for.
+Python
+class PDFSizeBot(fp.PoeBot):
+    async def get_response(
+        self, request: fp.QueryRequest
+    ) -> AsyncIterable[fp.PartialResponse]:
+        for message in reversed(request.query):
+            for attachment in message.attachments:
+                if attachment.content_type == "application/pdf":
+                    try:
+                        num_pages = _fetch_pdf_and_count_num_pages(attachment.url)
+                        yield fp.PartialResponse(text=f"{attachment.name} has {num_pages} pages")
+                    except FileDownloadError:
+                        yield fp.PartialResponse(text="Failed to retrieve the document.")
+                    return
+The final code should look like:
+Python
+Full Setup Code (Python)
+class FileDownloadError(Exception):
+    pass
+
+def _fetch_pdf_and_count_num_pages(url: str) -> int:
+    response = requests.get(url)
+    if response.status_code != 200:
+        raise FileDownloadError()
+    with open("temp_pdf_file.pdf", "wb") as f:
+        f.write(response.content)
+    reader = PdfReader("temp_pdf_file.pdf")
+    return len(reader.pages)
+
+class PDFSizeBot(fp.PoeBot):
+    async def get_response(
+        self, request: fp.QueryRequest
+    ) -> AsyncIterable[fp.PartialResponse]:
+        for message in reversed(request.query):
+            for attachment in message.attachments:
+                if attachment.content_type == "application/pdf":
+                    try:
+                        num_pages = _fetch_pdf_and_count_num_pages(attachment.url)
+                        yield fp.PartialResponse(text=f"{attachment.name} has {num_pages} pages")
+                    except FileDownloadError:
+                        yield fp.PartialResponse(text="Failed to retrieve the document.")
+                    return
+
+    async def get_settings(self, setting: fp.SettingsRequest) -> fp.SettingsResponse:
+        return fp.SettingsResponse(allow_attachments=True)
+from __future__ import annotations
+from typing import AsyncIterable
+import requests
+from PyPDF2 import PdfReader
+import fastapi_poe as fp
+
+from modal import App, Image, asgi_app, exit
+
+class FileDownloadError(Exception):
+    pass
+
+
+def _fetch_pdf_and_count_num_pages(url: str) -> int:
+    response = requests.get(url)
+    if response.status_code != 200:
+        raise FileDownloadError()
+    with open("temp_pdf_file.pdf", "wb") as f:
+        f.write(response.content)
+    reader = PdfReader("temp_pdf_file.pdf")
+    return len(reader.pages)
+
+
+class PDFSizeBot(fp.PoeBot):
+    async def get_response(
+        self, request: fp.QueryRequest
+    ) -> AsyncIterable[fp.PartialResponse]:
+        for message in reversed(request.query):
+            for attachment in message.attachments:
+                if attachment.content_type == "application/pdf":
+                    try:
+                        num_pages = _fetch_pdf_and_count_num_pages(attachment.url)
+                        yield fp.PartialResponse(text=f"{attachment.name} has {num_pages} pages")
+                    except FileDownloadError:
+                        yield fp.PartialResponse(text="Failed to retrieve the document.")
+                    return
+
+    async def get_settings(self, setting: fp.SettingsRequest) -> fp.SettingsResponse:
+        return fp.SettingsResponse(allow_attachments=True)
+
+REQUIREMENTS = ["fastapi-poe==0.0.48"]
+image = Image.debian_slim().pip_install(*REQUIREMENTS)
+app = App("pdfsizebot-poe")
+
+
+@app.function(image=image)
+@asgi_app()
+def fastapi_app():
+    bot = PDFSizeBot()
+    # see https://creator.poe.com/docs/quick-start#configuring-the-access-credentials
+    app = fp.make_app(bot, access_key=<YOUR_ACCESS_KEY>, bot_name=<YOUR_BOT_NAME>)
+    return app
+Sending files with your response
+The Poe API allows you to send attachments with your bot response. When using the fastapi_poe library, send file attachments with your bot response by calling
+post_message_attachment
+within the
+get_response
+function of your bot.
+Example
+In this example, the bot will take the input from the user, write it into a text file, and attach that text file in the response to the user. Copy the following code into a file called
+main.py
+(you can pick any name but the deployment commands that follow assume that this is the file name). Change the
+access_key
+stub with your actual key that you can generate on the
+create bot
+page.
+Python
+Full Setup Code (Python)
+class AttachmentOutputDemoBot(fp.PoeBot):
+    async def get_response(
+        self, request: fp.QueryRequest
+    ) -> AsyncIterable[fp.PartialResponse]:
+        await self.post_message_attachment(
+           message_id=request.message_id, file_data=request.query[-1].content, filename="dummy.txt"
+        )
+        yield fp.PartialResponse(text=f"Attached a text file containing your last message.")
+from __future__ import annotations
+from typing import AsyncIterable
+import fastapi_poe as fp
+from modal import App, Image, asgi_app
+
+
+class AttachmentOutputDemoBot(fp.PoeBot):
+    async def get_response(
+        self, request: fp.QueryRequest
+    ) -> AsyncIterable[fp.PartialResponse]:
+        await self.post_message_attachment(
+           message_id=request.message_id, file_data=request.query[-1].content, filename="dummy.txt"
+        )
+        yield fp.PartialResponse(text=f"Attached a text file containing your last message.")
+
+REQUIREMENTS = ["fastapi-poe==0.0.48"]
+image = Image.debian_slim().pip_install(*REQUIREMENTS)
+app = App("attachment-output-demo-poe")
+
+@app.function(image=image)
+@asgi_app()
+def fastapi_app():
+    bot = AttachmentOutputDemoBot()
+    # see https://creator.poe.com/docs/quick-start#configuring-the-access-credentials
+    # app = fp.make_app(bot, access_key=<YOUR_ACCESS_KEY>, bot_name=<YOUR_BOT_NAME>)
+    app = fp.make_app(bot, allow_without_key=True)
+    return app
+📘
+Limitations
+The
+access_key
+should be the key associated with the bot sending the response. It can be found in the edit bot page.
+It does not matter where
+post_message_attachment
+is called, as long as it is within the body of
+get_response
+. It can be called multiple times to attach multiple (up to 20) files.
+A file should not be larger than 50MB.
+Setting an introduction message
+The Poe API allows you to set a friendly introduction message for your bot, providing you with a way to instruct the users on how they should use the bot. In order to do so, you have to override
+get_settings
+and set the parameter called
+introduction_message
+to whatever you want that message to be.
+Python
+async def get_settings(self, setting: fp.SettingsRequest) -> fp.SettingsResponse:
+    return fp.SettingsResponse(
+        introduction_message="Welcome to the trivia bot. Please provide me a topic that you would like me to quiz you on."
+    )
+The final code looks like:
+Python
+Full Setup Code (Python)
+class TriviaBotSample(fp.PoeBot):
+    async def get_response(self, query: fp.QueryRequest) -> AsyncIterable[fp.PartialResponse]:
+        # implement the trivia bot.
+        yield fp.PartialResponse(text="Bot under construction. Please visit later")
+
+    async def get_settings(self, setting: fp.SettingsRequest) -> fp.SettingsResponse:
+        return fp.SettingsResponse(
+            introduction_message="Welcome to the trivia bot. Please provide me a topic that you would like me to quiz you on."
+        )
+from __future__ import annotations
+from typing import AsyncIterable
+from modal import App, Image, asgi_app
+import fastapi_poe as fp
+
+class TriviaBotSample(fp.PoeBot):
+    async def get_response(self, query: fp.QueryRequest) -> AsyncIterable[fp.PartialResponse]:
+        # implement the trivia bot.
+        yield fp.PartialResponse(text="Bot under construction. Please visit later")
+
+    async def get_settings(self, setting: fp.SettingsRequest) -> fp.SettingsResponse:
+        return fp.SettingsResponse(
+            introduction_message="Welcome to the trivia bot. Please provide me a topic that you would like me to quiz you on."
+        )
+    
+REQUIREMENTS = ["fastapi-poe==0.0.48"]
+image = Image.debian_slim().pip_install(*REQUIREMENTS)
+app = App("trivia-bot-poe")
+
+
+@app.function(image=image)
+@asgi_app()
+def fastapi_app():
+    bot = TriviaBotSample()
+    # see https://creator.poe.com/docs/quick-start#configuring-the-access-credentials
+    # app = fp.make_app(bot, access_key=<YOUR_ACCESS_KEY>, bot_name=<YOUR_BOT_NAME>)
+    app = fp.make_app(bot, allow_without_key=True)
+    return app
+Multi Bot Support
+The Poe client support @-mentioning other bots within the same chat. To include this support in with your bot, you need to enable
+enable_multi_bot_chat_prompting
+(Default False) in your bot settings. When this is enabled, Poe will check the previous chat history to see if there are multiple bots, and if so, it will combine the previous messages and add prompting such that your bot will have sufficient context about the conversation so far.
+If this setting is not enabled, you will continue to see bot/user messages as separate
+ProtocolMessages
+just like before.
+Updating bot settings
+Bots on poe each have
+settings
+that control how the bot behaves. For example, one such setting is
+server_bot_dependencies
+, which allows you to
+call other bots on poe
+. It is important to note that after modifying these settings, (i.e. after modifying
+get_settings()
+in your
+PoeBot
+class), these updates still need to be sent to the Poe servers. This is typically done automatically on server bot startup, within fastapi_poe's make_app function,
+❗️
+Warning!!!
+If you are not using
+fastapi_poe
+or you do not provide the
+access_key
+and
+bot_name
+into make_app() (see
+configuring access credentials
+),
+you will need to manually sync these settings
+using the steps below.
+1. Modify the bot settings to your desired specification
+If you are using the
+fastapi_poe
+library, then you just need to implement the
+get_settings
+method in the
+PoeBot
+class. The following is an example:
+Python
+async def get_settings(self, setting: fp.SettingsRequest) -> fp.SettingsResponse:
+    return fp.SettingsResponse(allow_attachments=True, server_bot_dependencies={"GPT-3.5-Turbo": 1, "Claude-instant": 1})
+2. Get your access key and bot name
+You can find both the access key and the bot name in the "edit bot" page by clicking on your bot -> clicking the triple dots -> edit bot.
+3. Make a post request to Poe's refetch settings endpoint with your bot name and access key.
+This is done by calling
+fp.client.sync_bot_settings
+from within a python script.
+Python
+import fastapi_poe as fp
+
+# Replace the bot name and access key with information of your bot
+bot_name = "server_bot_name"
+access_key = "your_server_bot_access_key"
+
+fp.sync_bot_settings(bot_name, access_key)
+If you are not using the python
+fastapi_poe
+library, you can also use
+curl
+:
+curl -X POST https://api.poe.com/bot/fetch_settings/<botname>/<access_key>
+Note that it is highly recommended to use
+fastapi_poe
+, and some features may not work smoothly without it.
+Using OpenAI function calling
+The Poe API allows you to use OpenAI function calling when accessing OpenAI models. In order to use this feature, you will simply need to provide a tools list which contains objects describing your function and an executables list which contains functions that correspond to the tools list. The following is an example.
+Python
+def get_current_weather(location, unit="fahrenheit"):
+    """Get the current weather in a given location"""
+    if "tokyo" in location.lower():
+        return json.dumps({"location": "Tokyo", "temperature": "11", "unit": unit})
+    elif "san francisco" in location.lower():
+        return json.dumps(
+            {"location": "San Francisco", "temperature": "72", "unit": unit}
+        )
+    elif "paris" in location.lower():
+        return json.dumps({"location": "Paris", "temperature": "22", "unit": unit})
+    else:
+        return json.dumps({"location": location, "temperature": "unknown"})
+
+
+tools_executables = [get_current_weather]
+
+tools_dict_list = [
+    {
+        "type": "function",
+        "function": {
+            "name": "get_current_weather",
+            "description": "Get the current weather in a given location",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "location": {
+                        "type": "string",
+                        "description": "The city and state, e.g. San Francisco, CA",
+                    },
+                    "unit": {"type": "string", "enum": ["celsius", "fahrenheit"]},
+                },
+                "required": ["location"],
+            },
+        },
+    }
+]
+tools = [fp.ToolDefinition(**tools_dict) for tools_dict in tools_dict_list]
+Additionally, you will need to define a dependency of two calls on an OpenAI model of your choice (in this case, the GPT-3.5-Turbo). You need a dependency of two because as part of the OpenAI function calling
+flow
+, you need to call OpenAI twice. Adjust this dependency limit if you want to make more than one function calling request while computing your response.
+Python
+async def get_settings(self, setting: fp.SettingsRequest) -> fp.SettingsResponse:
+    return fp.SettingsResponse(server_bot_dependencies={"GPT-3.5-Turbo": 2})
+The final code (including the setup code you need to host this on
+Modal
+) that goes into your
+main.py
+is as follows:
+Python
+Full Setup Code (Python)
+def get_current_weather(location, unit="fahrenheit"):
+    """Get the current weather in a given location"""
+    if "tokyo" in location.lower():
+        return json.dumps({"location": "Tokyo", "temperature": "11", "unit": unit})
+    elif "san francisco" in location.lower():
+        return json.dumps(
+            {"location": "San Francisco", "temperature": "72", "unit": unit}
+        )
+    elif "paris" in location.lower():
+        return json.dumps({"location": "Paris", "temperature": "22", "unit": unit})
+    else:
+        return json.dumps({"location": location, "temperature": "unknown"})
+
+
+tools_executables = [get_current_weather]
+
+tools_dict_list = [
+    {
+        "type": "function",
+        "function": {
+            "name": "get_current_weather",
+            "description": "Get the current weather in a given location",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "location": {
+                        "type": "string",
+                        "description": "The city and state, e.g. San Francisco, CA",
+                    },
+                    "unit": {"type": "string", "enum": ["celsius", "fahrenheit"]},
+                },
+                "required": ["location"],
+            },
+        },
+    }
+]
+tools = [fp.ToolDefinition(**tools_dict) for tools_dict in tools_dict_list]
+
+
+class GPT35FunctionCallingBot(fp.PoeBot):
+    async def get_response(
+        self, request: fp.QueryRequest
+    ) -> AsyncIterable[fp.PartialResponse]:
+        async for msg in fp.stream_request(
+            request,
+            "GPT-3.5-Turbo",
+            request.access_key,
+            tools=tools,
+            tool_executables=tools_executables,
+        ):
+            yield msg
+
+    async def get_settings(self, setting: fp.SettingsRequest) -> fp.SettingsResponse:
+        return fp.SettingsResponse(server_bot_dependencies={"GPT-3.5-Turbo": 2})
+from __future__ import annotations
+
+import json
+from typing import AsyncIterable
+
+import fastapi_poe as fp
+from modal import App, Image, asgi_app, exit
+
+
+def get_current_weather(location, unit="fahrenheit"):
+    """Get the current weather in a given location"""
+    if "tokyo" in location.lower():
+        return json.dumps({"location": "Tokyo", "temperature": "11", "unit": unit})
+    elif "san francisco" in location.lower():
+        return json.dumps(
+            {"location": "San Francisco", "temperature": "72", "unit": unit}
+        )
+    elif "paris" in location.lower():
+        return json.dumps({"location": "Paris", "temperature": "22", "unit": unit})
+    else:
+        return json.dumps({"location": location, "temperature": "unknown"})
+
+
+tools_executables = [get_current_weather]
+
+tools_dict_list = [
+    {
+        "type": "function",
+        "function": {
+            "name": "get_current_weather",
+            "description": "Get the current weather in a given location",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "location": {
+                        "type": "string",
+                        "description": "The city and state, e.g. San Francisco, CA",
+                    },
+                    "unit": {"type": "string", "enum": ["celsius", "fahrenheit"]},
+                },
+                "required": ["location"],
+            },
+        },
+    }
+]
+tools = [fp.ToolDefinition(**tools_dict) for tools_dict in tools_dict_list]
+
+
+class GPT35FunctionCallingBot(fp.PoeBot):
+    async def get_response(
+        self, request: fp.QueryRequest
+    ) -> AsyncIterable[fp.PartialResponse]:
+        async for msg in fp.stream_request(
+            request,
+            "GPT-3.5-Turbo",
+            request.access_key,
+            tools=tools,
+            tool_executables=tools_executables,
+        ):
+            yield msg
+
+    async def get_settings(self, setting: fp.SettingsRequest) -> fp.SettingsResponse:
+        return fp.SettingsResponse(server_bot_dependencies={"GPT-3.5-Turbo": 2})
+
+
+REQUIREMENTS = ["fastapi-poe==0.0.48"]
+image = Image.debian_slim().pip_install(*REQUIREMENTS)
+app = App("functioncalling-poe")
+
+@app.function(image=image)
+@asgi_app()
+def fastapi_app():
+    bot = GPT35FunctionCallingBot()
+    # see https://creator.poe.com/docs/quick-start#configuring-the-access-credentials
+    app = fp.make_app(bot, access_key=<YOUR_ACCESS_KEY>, bot_name=<YOUR_BOT_NAME>)
+    return app
+Accessing HTTP request information
+In the special case that you need to access specific http information about the requests coming to your bot, our python client (
+fastapi_poe
+) exposes the underlying Starlette
+Request
+object in the ".http_request" attribute of the request object passed to the query handler. This allows you to access the request information such as the url and query params. The following is an example (including the setup code you need to host this on
+Modal
+):
+Python
+Full Setup Code (Python)
+class HttpRequestBot(fp.PoeBot):
+    async def get_response_with_context(
+        self, request: fp.QueryRequest, context: fp.RequestContext
+    ) -> AsyncIterable[fp.PartialResponse]:
+        request_url = context.http_request.url
+        query_params = context.http_request.query_params
+        yield fp.PartialResponse(
+            text=f"The request url is: {request_url}, query params are: {query_params}"
+        )
+from __future__ import annotations
+
+from typing import AsyncIterable
+
+import fastapi_poe as fp
+from modal import App, Image, asgi_app, exit
+
+
+class HttpRequestBot(fp.PoeBot):
+    async def get_response_with_context(
+        self, request: fp.QueryRequest, context: fp.RequestContext
+    ) -> AsyncIterable[fp.PartialResponse]:
+        request_url = context.http_request.url
+        query_params = context.http_request.query_params
+        yield fp.PartialResponse(
+            text=f"The request url is: {request_url}, query params are: {query_params}"
+        )
+
+REQUIREMENTS = ["fastapi-poe==0.0.48"]
+image = Image.debian_slim().pip_install(*REQUIREMENTS)
+app = App("http-request-poe")
+
+@app.function(image=image)
+@asgi_app()
+def fastapi_app():
+    bot = HttpRequestBot()
+    # see https://creator.poe.com/docs/quick-start#configuring-the-access-credentials
+    app = fp.make_app(bot, access_key=<YOUR_ACCESS_KEY>, bot_name=<YOUR_BOT_NAME>)
+    return app
+Programmatically accessing your Server bot
+We also provide a helper function for you to test the bot query API in a lower friction manner.
+This helper function is for testing and debugging responses only.
+Get your API Key
+Navigate to
+poe.com/api_key
+and copy your user API key. Note that access to an API key is currently limited to Poe subscribers to minimize abuse.
+Usage done with this API key will count against your user account's message limits on Poe,
+so be sure to only use it for testing and not for cases when other people are using your bot
+.
+Access the bot query API using "get_bot_response"
+In your python shell, run the following after replacing the placeholder with your API key.
+Python
+import asyncio
+import fastapi_poe as fp
+
+# Create an asynchronous function to encapsulate the async for loop
+async def get_responses(api_key, messages):
+    async for partial in fp.get_bot_response(messages=messages, bot_name="GPT-3.5-Turbo", api_key=api_key):
+        print(partial)
+ 
+# Replace <api_key> with your actual API key, ensuring it is a string.
+api_key = <api_key>
+message = fp.ProtocolMessage(role="user", content="Hello world")
+
+# Run the event loop
+# For Python 3.7 and newer
+asyncio.run(get_responses(api_key, [message]))
+
+# For Python 3.6 and older, you would typically do the following:
+# loop = asyncio.get_event_loop()
+# loop.run_until_complete(get_responses(api_key))
+# loop.close()
+If you are using an ipython shell, you can instead use the following simpler code.
+Python
+import fastapi_poe as fp
+
+message = fp.ProtocolMessage(role="user", content="Hello world")
+async for partial in fp.get_bot_response(messages=[message], bot_name="GPT-3.5-Turbo", api_key=<api_key>): 
+    print(partial)
+Updated
+about 1 month ago
+Table of Contents
+Accessing other bots on Poe
+Rendering an image in your response
+Rendering HTML in your response
+Enabling file upload for your bot
+Sending files with your response
+Setting an introduction message
+Multi Bot Support
+Updating bot settings
+Using OpenAI function calling
+Accessing HTTP request information
+Programmatically accessing your Server bot
+
+Recommended bot settings
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Recommended bot settings
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Recommended bot settings
+There are various settings that can be applied to your bot. For the best user experience we recommend turning on the following settings for your bot:
+enable_multi_bot_chat_prompting=True
+: This will automatically apply some prompting to make sure your bots respond appropriately when there are multiple bots in the chat.
+We recommend turning this on for all bots as long as they don’t rely on the conversation history having specific formatting.
+This may cause two human messages to appear consecutively though; if that’s an issue, you can turn on
+enforce_author_role_alternation
+to automatically handle this.
+allow_attachments=True
+: Turn on attachments for your bot
+For text attachments, this will by default parse the text attachment and include it in the prompt (since
+expand_text_attachments=True
+by default)
+Recommend turning on for all text-based bots without native vision capabilities:
+enable_image_comprehension=True
+: Poe converts images into text prompts using a vision model
+You should enable this for models which doesn’t support multimodality yet.
+Updated
+5 months ago
+
+fastapi_poe: Python API Reference
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+fastapi_poe: Python API Reference
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+fastapi_poe: Python API Reference
+The following is the API reference for the
+fastapi_poe
+client library. The reference assumes that you used
+import fastapi_poe as fp
+.
+fp.PoeBot
+The class that you use to define your bot behavior. Once you define your PoeBot class, you
+pass it to
+make_app
+to create a FastAPI app that serves your bot.
+Parameters:
+path
+(
+str = "/"
+): This is the path at which your bot is served. By default, it's
+set to "/" but this is something you can adjust. This is especially useful if you want to serve
+multiple bots from one server.
+access_key
+(
+Optional[str] = None
+): This is the access key for your bot and when
+provided is used to validate that the requests are coming from a trusted source. This access key
+should be the same one that you provide when integrating your bot with Poe at:
+https://poe.com/create_bot?server=1
+. You can also set this to None but certain features like
+file output that mandate an
+access_key
+will not be available for your bot.
+should_insert_attachment_messages
+(
+bool = True
+): A flag to decide whether to parse out
+content from attachments and insert them as messages into the conversation. This is set to
+True
+by default and we recommend leaving on since it allows your bot to comprehend attachments
+uploaded by users by default.
+concat_attachments_to_message
+(
+bool = False
+): Deprecated. This was used to concatenate
+attachment content to the message body. This is now handled by
+insert_attachment_messages
+.
+This will be removed in a future release.
+PoeBot.get_response
+Override this to define your bot's response given a user query.
+Parameters:
+request
+(
+QueryRequest
+): an object representing the chat response request from Poe.
+This will contain information about the chat state among other things.
+Returns:
+AsyncIterable[PartialResponse]
+: objects representing your
+response to the Poe servers. This is what gets displayed to the user.
+Example usage:
+Python
+async def get_response(self, request: fp.QueryRequest) -> AsyncIterable[fp.PartialResponse]:
+    last_message = request.query[-1].content
+    yield fp.PartialResponse(text=last_message)
+PoeBot.get_response_with_context
+A version of
+get_response
+that also includes the request context information. By
+default, this will call
+get_response
+.
+Parameters:
+request
+(
+QueryRequest
+): an object representing the chat response request from Poe.
+This will contain information about the chat state among other things.
+context
+(
+RequestContext
+): an object representing the current HTTP request.
+Returns:
+AsyncIterable[Union[PartialResponse, ErrorResponse]]
+: objects representing your
+response to the Poe servers. This is what gets displayed to the user.
+PoeBot.get_settings
+Override this to define your bot's settings.
+Parameters:
+setting
+(
+SettingsRequest
+): An object representing the settings request.
+Returns:
+SettingsResponse
+: An object representing the settings you want to use for your bot.
+PoeBot.get_settings_with_context
+A version of
+get_settings
+that also includes the request context information. By
+default, this will call
+get_settings
+.
+Parameters:
+setting
+(
+SettingsRequest
+): An object representing the settings request.
+context
+(
+RequestContext
+): an object representing the current HTTP request.
+Returns:
+SettingsResponse
+: An object representing the settings you want to use for your bot.
+PoeBot.on_feedback
+Override this to record feedback from the user.
+Parameters:
+feedback_request
+(
+ReportFeedbackRequest
+): An object representing the Feedback rqeuest
+from Poe. This is sent out when a user provides feedback on a response on your bot.
+Returns:
+None
+PoeBot.on_feedback_with_context
+A version of
+on_feedback
+that also includes the request context information. By
+default, this will call
+on_feedback
+.
+Parameters:
+feedback_request
+(
+ReportFeedbackRequest
+): An object representing a feedback rqeuest
+from Poe. This is sent out when a user provides feedback on a response on your bot.
+context
+(
+RequestContext
+): an object representing the current HTTP request.
+Returns:
+None
+PoeBot.on_error
+Override this to record errors from the Poe server.
+Parameters:
+error_request
+(
+ReportErrorRequest
+): An object representing an error request from Poe.
+This is sent out when the Poe server runs into an issue processing the response from your
+bot.
+Returns:
+None
+PoeBot.on_error_with_context
+A version of
+on_error
+that also includes the request context information. By
+default, this will call
+on_error
+.
+Parameters:
+error_request
+(
+ReportErrorRequest
+): An object representing an error request from Poe.
+This is sent out when the Poe server runs into an issue processing the response from your
+bot.
+context
+(
+RequestContext
+): an object representing the current HTTP request.
+Returns:
+None
+PoeBot.post_message_attachment
+Used to output an attachment in your bot's response.
+Parameters:
+message_id
+(
+Identifier
+): The message id associated with the current QueryRequest
+object.
+Important
+: This must be the request that is currently being handled by
+get_response. Attempting to attach files to previously handled requests will fail.
+access_key
+(
+str
+): The access_key corresponding to your bot. This is needed to ensure
+that file upload requests are coming from an authorized source.
+download_url
+(
+Optional[str] = None
+): A url to the file to be attached to the message.
+file_data
+(
+Optional[Union[bytes, BinaryIO]] = None
+): The contents of the file to be
+uploaded. This should be a bytes-like or file object.
+filename
+(
+Optional[str] = None
+): The name of the file to be attached.
+Returns:
+AttachmentUploadResponse
+Note
+: You need to provide either the
+download_url
+or both of
+file_data
+and
+filename
+.
+PoeBot.concat_attachment_content_to_message_body
+Concatenate received attachment file content into the message body. This will be called
+by default if
+concat_attachments_to_message
+is set to
+True
+but can also be used
+manually if needed.
+Parameters:
+query_request
+(
+QueryRequest
+): the request object from Poe.
+Returns:
+QueryRequest
+: the request object after the attachments are unpacked and added to the
+message body.
+PoeBot.insert_attachment_messages
+Insert messages containing the contents of each user attachment right before the last user
+message. This ensures the bot can consider all relevant information when generating a
+response. This will be called by default if
+should_insert_attachment_messages
+is set to
+True
+but can also be used manually if needed.
+Parameters:
+query_request
+(
+QueryRequest
+): the request object from Poe.
+Returns:
+QueryRequest
+: the request object after the attachments are unpacked and added to the
+message body.
+PoeBot.make_prompt_author_role_alternated
+Concatenate consecutive messages from the same author into a single message. This is useful
+for LLMs that require role alternation between user and bot messages.
+Parameters:
+protocol_messages
+(
+Sequence[ProtocolMessage]
+): the messages to make alternated.
+Returns:
+Sequence[ProtocolMessage]
+: the modified messages.
+fp.make_app
+Create an app object for your bot(s).
+Parameters:
+bot
+(
+Union[PoeBot, Sequence[PoeBot]]
+): A bot object or a list of bot objects if you want
+to host multiple bots on one server.
+access_key
+(
+str = ""
+): The access key to use.  If not provided, the server tries to
+read the POE_ACCESS_KEY environment variable. If that is not set, the server will
+refuse to start, unless
+allow_without_key
+is True. If multiple bots are provided,
+the access key must be provided as part of the bot object.
+allow_without_key
+(
+bool = False
+): If True, the server will start even if no access
+key is provided. Requests will not be checked against any key. If an access key is provided, it
+is still checked.
+app
+(
+Optional[FastAPI] = None
+): A FastAPI app instance. If provided, the app will be
+configured with the provided bots, access keys, and other settings. If not provided, a new
+FastAPI application instance will be created and configured.
+Returns:
+FastAPI
+: A FastAPI app configured to serve your bot when run.
+fp.run
+Serve a poe bot using a FastAPI app. This function should be used when you are running the
+bot locally. The parameters are the same as they are for
+make_app
+.
+Returns:
+None
+fp.stream_request
+The Entry point for the Bot Query API. This API allows you to use other bots on Poe for
+inference in response to a user message. For more details, checkout:
+https://creator.poe.com/docs/server-bots-functional-guides#accessing-other-bots-on-poe
+Parameters:
+request
+(
+QueryRequest
+): A QueryRequest object representing a query from Poe. This object
+also includes information needed to identify the user for compute point usage.
+bot_name
+(
+str
+): The bot you want to invoke.
+api_key
+(
+str = ""
+): Your Poe API key, available at poe.com/api_key. You will need
+this in case you are trying to use this function from a script/shell. Note that if an
+api_key
+is provided, compute points will be charged on the account corresponding to the
+api_key
+.
+tools: (
+Optional[List[ToolDefinition]] = None
+): An list of ToolDefinition objects describing
+the functions you have. This is used for OpenAI function calling.
+tool_executables: (
+Optional[List[Callable]] = None
+): An list of functions corresponding
+to the ToolDefinitions. This is used for OpenAI function calling.
+fp.get_bot_response
+Use this function to invoke another Poe bot from your shell.
+Parameters:
+messages
+(
+List[ProtocolMessage]
+): A list of messages representing your conversation.
+bot_name
+(
+str
+): The bot that you want to invoke.
+api_key
+(
+str
+): Your Poe API key. This is available at:
+poe.com/api_key
+fp.get_final_response
+A helper function for the bot query API that waits for all the tokens and concatenates the full
+response before returning.
+Parameters:
+request
+(
+QueryRequest
+): A QueryRequest object representing a query from Poe. This object
+also includes information needed to identify the user for compute point usage.
+bot_name
+(
+str
+): The bot you want to invoke.
+api_key
+(
+str = ""
+): Your Poe API key, available at poe.com/api_key. You will need this in
+case you are trying to use this function from a script/shell. Note that if an
+api_key
+is
+provided, compute points will be charged on the account corresponding to the
+api_key
+.
+fp.QueryRequest
+Request parameters for a query request.
+Fields:
+query
+(
+List[ProtocolMessage]
+): list of message representing the current state of the chat.
+user_id
+(
+Identifier
+): an anonymized identifier representing a user. This is persistent
+for subsequent requests from that user.
+conversation_id
+(
+Identifier
+): an identifier representing a chat. This is
+persistent for subsequent request for that chat.
+message_id
+(
+Identifier
+): an identifier representing a message.
+access_key
+(
+str = "<missing>"
+): contains the access key defined when you created your bot
+on Poe.
+temperature
+(
+float = 0.7
+): Temperature input to be used for model inference.
+skip_system_prompt
+(
+bool = False
+): Whether to use any system prompting or not.
+logit_bias
+(
+Dict[str, float] = {}
+)
+stop_sequences
+(
+List[str] = []
+)
+language_code
+(
+str
+= "en"`): BCP 47 language code of the user's client.
+fp.ProtocolMessage
+A message as used in the Poe protocol.
+Fields:
+role
+(
+Literal["system", "user", "bot"]
+)
+sender_id
+(
+Optional[str]
+)
+content
+(
+str
+)
+content_type
+(
+ContentType="text/markdown"
+)
+timestamp
+(
+int = 0
+)
+message_id
+(
+str = ""
+)
+feedback
+(
+List[MessageFeedback] = []
+)
+attachments
+(
+List[Attachment] = []
+)
+fp.PartialResponse
+Representation of a (possibly partial) response from a bot. Yield this in
+PoeBot.get_response
+or
+PoeBot.get_response_with_context
+to communicate your response to Poe.
+Fields:
+text
+(
+str
+): The actual text you want to display to the user. Note that this should solely
+be the text in the next token since Poe will automatically concatenate all tokens before
+displaying the response to the user.
+data
+(
+Optional[Dict[str, Any]]
+): Used to send arbitrary json data to Poe. This is
+currently only used for OpenAI function calling.
+is_suggested_reply
+(
+bool = False
+): Setting this to true will create a suggested reply with
+the provided text value.
+is_replace_response
+(
+bool = False
+): Setting this to true will clear out the previously
+displayed text to the user and replace it with the provided text value.
+fp.ErrorResponse
+Similar to
+PartialResponse
+. Yield this to communicate errors from your bot.
+Fields:
+text
+(
+str
+): The actual error message you want to display to the user.
+raw_response
+(
+Any
+): The raw exception you can pass for debugging purposes.
+allow_retry
+(
+bool = False
+): Whether or not to allow a user to retry on error.
+error_type
+(
+Optional[ErrorType] = None
+): An enum indicating what error to display.
+fp.MetaResponse
+Similar to
+Partial Response
+. Yield this to communicate
+meta
+events from server bots.
+Fields:
+suggested_replies
+(
+bool = False
+): Whether or not to enable suggested replies.
+content_type
+(
+ContentType = "text/markdown"
+): Used to describe the format of the response.
+The currently supported values are
+text/plain
+and
+text/markdown
+.
+refetch_settings
+(
+bool = False
+): Used to trigger a settings fetch request from Poe. A more
+robust way to trigger this is documented at:
+https://creator.poe.com/docs/server-bots-functional-guides#updating-bot-settings
+fp.SettingsRequest
+Request parameters for a settings request. Currently, this contains no fields but this
+might get updated in the future.
+fp.SettingsResponse
+An object representing your bot's response to a settings object.
+Fields:
+server_bot_dependencies
+(
+Dict[str, int] = {}
+): Information about other bots that your bot
+uses. This is used to facilitate the Bot Query API.
+allow_attachments
+(
+bool = False
+): Whether to allow users to upload attachments to your
+bot.
+introduction_message
+(
+str = ""
+): The introduction message to display to the users of your
+bot.
+expand_text_attachments
+(
+bool = True
+): Whether to request parsed content/descriptions from
+text attachments with the query request. This content is sent through the new parsed_content
+field in the attachment dictionary. This change makes enabling file uploads much simpler.
+enable_image_comprehension
+(
+bool = False
+): Similar to
+expand_text_attachments
+but for
+images.
+enforce_author_role_alternation
+(
+bool = False
+): If enabled, Poe will concatenate messages
+so that they follow role alternation, which is a requirement for certain LLM providers like
+Anthropic.
+enable_multi_bot_chat_prompting
+(
+bool = False
+): If enabled, Poe will combine previous bot
+messages if there is a multibot context.
+fp.ReportFeedbackRequest
+Request parameters for a report_feedback request.
+Fields:
+message_id
+(
+Identifier
+)
+user_id
+(
+Identifier
+)
+conversation_id
+(
+Identifier
+)
+feedback_type
+(
+FeedbackType
+)
+fp.ReportErrorRequest
+Request parameters for a report_error request.
+Fields:
+message
+(
+str
+)
+metadata
+(
+Dict[str, Any]
+)
+fp.Attachment
+Attachment included in a protocol message.
+Fields:
+url
+(
+str
+)
+content_type
+(
+str
+)
+name
+(
+str
+)
+parsed_content
+(
+Optional[str] = None
+)
+fp.MessageFeedback
+Feedback for a message as used in the Poe protocol.
+Fields:
+type
+(
+FeedbackType
+)
+reason
+(
+Optional[str]
+)
+fp.ToolDefinition
+An object representing a tool definition used for OpenAI function calling.
+Fields:
+type
+(
+str
+)
+function
+(
+FunctionDefinition
+): Look at the source code for a detailed description
+of what this means.
+fp.ToolCallDefinition
+An object representing a tool call. This is returned as a response by the model when using
+OpenAI function calling.
+Fields:
+id
+(
+str
+)
+type
+(
+str
+)
+function
+(
+FunctionDefinition
+): Look at the source code for a detailed description
+of what this means.
+fp.ToolResultDefinition
+An object representing a function result. This is passed to the model in the last step
+when using OpenAI function calling.
+Fields:
+role
+(
+str
+)
+name
+(
+str
+)
+tool_call_id
+(
+str
+)
+content
+(
+str
+)
+Updated
+3 months ago
+Table of Contents
+fp.PoeBot
+PoeBot.get_response
+PoeBot.get_response_with_context
+PoeBot.get_settings
+PoeBot.get_settings_with_context
+PoeBot.on_feedback
+PoeBot.on_feedback_with_context
+PoeBot.on_error
+PoeBot.on_error_with_context
+PoeBot.post_message_attachment
+PoeBot.concat_attachment_content_to_message_body
+PoeBot.insert_attachment_messages
+PoeBot.make_prompt_author_role_alternated
+fp.make_app
+fp.run
+fp.stream_request
+fp.get_bot_response
+fp.get_final_response
+fp.QueryRequest
+fp.ProtocolMessage
+fp.PartialResponse
+fp.ErrorResponse
+fp.MetaResponse
+fp.SettingsRequest
+fp.SettingsResponse
+fp.ReportFeedbackRequest
+fp.ReportErrorRequest
+fp.Attachment
+fp.MessageFeedback
+fp.ToolDefinition
+fp.ToolCallDefinition
+fp.ToolResultDefinition
+
+Poe Protocol Specification
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Poe Protocol Specification
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Poe Protocol Specification
+Poe
+is a platform for interacting with AI-based bots. Poe provides access to popular chat bots like OpenAI's GPT-3.5-Turbo and Anthropic's Claude, but also allows a creator to create their own bot by implementing the following protocol.
+Introduction
+This specification provides a way to run custom bots from any web-accessible service that can be used by the Poe app. Poe users will send requests to the Poe server, which will in turn send requests to the bot server using this specification. As the bot server responds, Poe will show the response to the user. See
+Quick start
+for a high-level introduction to running a server bot.
+Terminology
+Poe server
+:
+server run by Poe that receives client requests, turns them into requests to bot servers, and streams the response back to the Poe client.
+Bot server
+:
+server run by the creator that responds to requests from Poe servers. The responses are ultimately shown to users in their Poe client.
+Concepts
+Identifiers
+The protocol uses identifiers for certain request fields. These are labeled as “identifier” in the specification. Identifiers are globally unique. They consist of a sequence of 1 to 3 lowercase ASCII characters, followed by a hyphen, followed by 32 lowercase alphanumeric ASCII characters or
+=
+characters (i.e., they fulfill the regex
+^[a-z]{1,3}-[a-z0-9=]{32}$
+).
+The characters before the hyphen are a tag that represents the type of the object. The following types are currently in use:
+m
+: represents a message
+u
+: represents a user
+c
+: represents a conversation (thread)
+d
+: represents metadata sent with a message
+Authentication
+While creating a bot, a creator can provide an access key consisting of 32 ASCII characters. To allow bot servers to confirm that the requests come from Poe, all requests will have an Authorization HTTP header
+Bearer <access_key>
+.
+Content types
+Messages may use the following content types:
+text/plain
+: Plain text, rendered without further processing
+text/markdown
+: Markdown text. Specifically, this supports all features of GitHub-Flavored Markdown (GFM, specified at
+https://github.github.com/gfm/
+). Poe may however modify the rendered Markdown for security or usability reasons.
+Versioning
+It is expected that the API will be extended in the future to support additional features. The protocol version string consists of two numbers (e.g., 1.0).
+The first number is the
+request version
+. It will be incremented if the form the request takes changes in an incompatible fashion. For example, the current protocol only contains a single API call from Poe servers to bot servers. If we were to add another API call that bot servers are expected to support, we would increment the request version (e.g., from 1.0 to 2.0). This is expected to be very rare, and it will be communicated to bot servers well in advance.
+The second number is the
+response version.
+It will be incremented whenever the Poe server adds support for a new feature that bot servers can use. For example, as of this version we support two content types in LLM responses. If we were to add a third, we would increment the response version (e.g., from 1.0 to 1.1). Bot servers written for an earlier response version will continue to work; they simply will not use the new feature.
+The response version is also incremented for backward-compatible changes to the request. For example, if we add a new field to the request body, we would increment the response version. This is safe for old bot servers as they will simply ignore the added field.
+Throughout the protocol, bot servers should ignore any dictionary keys without a specified meaning. They may be used in a future version of the protocol.
+Limits
+Poe may implement limits on bot servers to ensure the reliability and scalability of the product. In particular:
+The initial response to any request must be returned within 5 seconds.
+The response to any request (including
+query
+requests) must be completed within 600 seconds.
+The total length of a bot response (the sum of the length of all
+text
+events sent in response to a
+query
+request) may not exceed 100,000 characters.
+The total number of events sent in response to a
+query
+event may not exceed 10,000.
+If the number of messages in a user's previous conversation with the bot exceeds 1000, Poe may truncate the conversation.
+We may raise these limits in the future if good use cases come up.
+Requests
+The Poe server will send an HTTP POST request to the bot servers URL with content type
+application/json
+. The body will be a JSON dictionary with the following keys:
+version
+(string)
+: The API version that the server is using.
+type
+(string)
+: This is one of the following strings:
+query
+: Called when the user makes a query to the bot (i.e., they send a message).
+settings
+: Query the bot for its desired settings.
+report_feedback
+: Report to the bot server when certain events happen (e.g., the user likes a message).
+report_error
+: Report to the bot server when an error happens that is attributable to the bot (e.g., it uses the protocol incorrectly).
+Additional request types may be added in the future. Bot servers should ignore any request types they do not understand, ideally by sending a
+501 Not Implemented
+HTTP response.
+Each of the request types is discussed in detail below:
+query
+The
+query
+request type
+In addition to the request fields that are valid for all queries,
+query
+requests take the following parameters in the request:
+query
+: An array containing one or more dictionaries that represent a previous message in the conversation with the bot. These are in chronological order, the most recent message last. It includes all messages in the current context window (see above). These dictionaries contain the following keys:
+role
+(string): one of the following strings:
+system
+: A message that tells the bot how it should work. Example: “You are an AI assistant that gives useful information to Poe users.”
+user
+: A message from the user. Example: “What is the capital of Nepal?"
+bot
+: A response from the bot. Example: “The capital of Nepal is Kathmandu.”
+More roles may be added in the future. Bot servers should ignore messages with roles they do not recognize.
+content
+(string): The text of the message.
+content_type
+(string): The content type of the message (see under “Content type” above). Bots should ignore messages with content types they do not understand.
+timestamp
+(int): The time the message was sent, as the number of microseconds since the Unix epoch.
+message_id
+(identifier with type m): Identifier for this message.
+feedback
+(array): A list of dictionaries representing feedback that the user gave to the message. Each dictionary has the following keys:
+type
+(string): Either
+like
+or
+dislike
+. More types may be added in the future and bot servers should ignore types they do not recognize.
+reason
+(string): A string representing the reason for the action. This key may be omitted.
+attachments
+(array): A list of dictionaries representing attachments that the user has sent with message. Each dictionary has the following keys:
+url
+(string): A URL pointing to the raw file. This URL is only guaranteed to remain valid for 10 minutes from when the request is sent.
+content_type
+(string): The MIME type for the file (e.g.,
+image/png
+or
+application/pdf
+).
+name
+(string): The file name for the file (e.g.,
+paper.pdf
+).
+parsed_content
+(Optional string): If
+expand_text_attachments
+or
+enable_image_comprehension
+are enabled, parsed content will be passed in through this field.
+message_id
+(identifier with type
+m
+): identifier for the message that the bot will create; also used for the
+report_feedback
+endpoint
+user_id
+(identifier with type
+u
+): the user making the request
+conversation_id
+(identifier with type
+c
+): identifier for the conversation (thread) the user is currently in. Resets when context is cleared.
+metadata
+(identifier with type
+d
+): internal metadata used by Poe when
+accessing other bots
+. This data must be sent when using the API to access other Poe bots.
+The Poe server may also send the following parameters influencing how the underlying LLM, if any, is invoked. Bot servers may ignore these parameters or treat them as hints as they wish:
+temperature
+(float in range
+0 <= temperature <= infinity
+): indicates what temperature the bot should use while making requests. Bots for which this setting does not make sense may ignore this parameter.
+skip_system_prompt
+(boolean): if set to true, bots should minimize any adjustments they make to the prompt before sending data to the underlying LLM. Exactly what this means is up to individual bots.
+stop_sequences
+(array of string): if the LLM encounters one of these strings, it should stop its response.
+logit_bias
+(object with float values): an object where the keys are tokens and the values are floats in the range
+-100 <= value <= 100
+, where a negative value makes the token less likely to be emitted and a positive value makes the token more likely to be emitted.
+Response
+The bot server should respond with an HTTP response code of 200. If any other response code is returned, the Poe server will show an error message to the user. The server must respond with a stream of server-sent events, as specified by the WhatWG (
+https://html.spec.whatwg.org/multipage/server-sent-events.html
+).
+Server-sent events contain a type and data. The Poe API supports several event types with different meanings. For each type, the data is a JSON string as specified below. The following event types are supported:
+meta
+: represents metadata about how the Poe server should treat the bot server response. This event should be the first event sent back by the bot server. If no
+meta
+event is given, the default values are used. If a
+meta
+event is not the first event, the behavior is unspecified; currently it is ignored but future extensions to the protocol may allow multiple
+meta
+events in one response. The data dictionary supports the following keys (any additional keys passed are currently ignored, but may gain a meaning in a future version of the protocol):
+content_type
+(string, defaults to
+text/markdown
+): If this is
+text/markdown
+, the response is rendered as Markdown by the Poe client. If it is
+text/plain
+, the response is rendered as plain text. Other values are unsupported and are treated like
+text/plain
+.
+suggested_replies
+(boolean, defaults to false): If this is true, Poe will suggest followup messages to the user that they might want to send to the bot. If this is false, no suggested replies will be shown to the user. Note that the protocol also supports bots sending their own suggested replies (see below). If the bot server sends any
+suggested_reply
+event, Poe will not show any of its own suggested replies, only those suggested by the bot, regardless of the value of the
+suggested_replies
+setting.
+text
+: represents a piece of text to send to the user. This is a partial response; the text shown to the user when the request is complete will be a concatenation of the texts from all
+text
+events. The data dictionary may have the following keys:
+text
+(string): A partial response to the user’s query
+json
+: represents a piece of data send as part of the response. This is usually used to any other information that does not necessarily need to be shown to the user (for example, information about what functions to call when using
+OpenAI function calling
+).
+replace_response
+: like
+text
+, but discards all previous
+text
+events. The user will no longer see the previous responses, and instead see only the text provided by this event. The data dictionary must have the following keys:
+text
+(string): A partial response to the user's query
+suggested_reply
+: represents a suggested followup query that the user can send to reply to the bot’s query. The Poe UI may show these followups as buttons the user can press to immediately send a new query. The data dictionary has the following keys:
+text
+(string): Text of the suggested reply.
+error
+: indicates that an error occurred in the bot server. If this event type is received, the server will close the connection and indicate to the user that there was an error communicating with the bot server. The server may retry the request. The data dictionary may contain the following keys:
+allow_retry
+(boolean): If this is False, the server will not retry the request. If this is True or omitted, the server may retry the request.
+text
+(string): The message the user will see regarding the error. Consider translating the message using the QueryRequest's
+language_code
+for better readability.
+raw_response
+(Exception): Optionally, pass in the raw exception into this field for easier debugging. The user will not see this field.
+error_type
+(string): May contain an
+error_type
+. Specifying an
+error_type
+allows Poe to handle protocol bot errors similarly to Poe-internal errors. See
+#supported-error_types
+for more information.
+done
+: must be the last event in the stream, indicating that the bot response is finished. The server will close the connection after this event is received. The data for this event is currently ignored, but it must be valid JSON.
+The bot response must include at least one
+text
+or
+error
+event; it is an error to send no response.
+If the Poe server receives an event type it does not recognize, it ignores the event.
+Supported error_types
+user_message_too_long
+Raise this if the latest user message is too long for the API bot to handle. This will raise an error to the user.
+settings
+This request takes no additional request parameters other than the standard ones.
+The server should respond with a response code of 200 and content type of
+application/json
+. The JSON response should be a dictionary containing the keys listed below. All keys are optional; if they are not specified the default values are used. Poe reserves the right to change the defaults at any time, so if bots rely on a particular setting, they should set it explicitly.
+If a settings request fails (it does not return a 200 response code with a valid JSON body), the previous settings are used for the bot. If this is the first request, that means the default values are used for all settings; if it is a refetch request, the settings previously used for the bot remain in use. If the request does not return a 2xx or 501 response code, the Poe server may retry the settings request after some time.
+Response
+The response may contain the following keys:
+server_bot_dependencies
+(mapping of strings to integers): Declare what bots your server bot will access through the
+bot query API
+. The keys in the mapping are handles of Poe bots and the values are the number of calls to each bot that the server bot is expected to make. For example, setting this field to
+{"GPT-3.5-Turbo": 1}
+declares that the bot will use a single call to
+GPT-3.5-Turbo
+. Poe may show this value to users, and will enforce that bots do not access other bots that they did not declare beforehand. In addition, you may not currently use more than 10 calls to other bots for a single message.
+allow_attachments
+(boolean): If true, allow users to send attachments with messages sent to the bot. The default is false.
+expand_text_attachments
+(boolean): If
+allow_attachments=True
+, Poe will parse text files and send their content in the parsed_content field of the attachment object. Defaults to True.
+enable_image_comprehension
+(boolean): If
+allow_attachments=True
+, Poe will use image vision to generate a description of image attachments and send their content in the
+parsed_content
+field of the attachment object. If this is enabled, the Poe user will only be able to send at most one image per message due to image vision limitations. Defaults to False.
+introduction_message
+(string): Set a message that the bot will use to introduce itself to users at the start of a chat. This message is always treated as Markdown. By default, bots will have no introduction.
+enforce_author_role_alternation
+(boolean): whether Poe should concatenate messages to follow strict user/bot alternation before sending to the bot. Defaults to False.
+enable_multi_bot_chat_prompting
+(boolean): whether Poe should combine previous chat history into a single message with special prompting so that the current bot will have sufficient context about a multi bot chat. Defaults to False.
+report_feedback
+This request takes the following additional parameters:
+message_id
+(identifier with type m): The message for which feedback is provided.
+user_id
+(identifier with type
+u
+): The user providing the feedback
+conversation_id
+(identifier with type
+c
+): The conversation giving rise to the feedback
+feedback_type
+(string): May be
+like
+or
+dislike
+. Additional types may be added in the future; bot servers should ignore feedback with types they do not recognize.
+Response
+The server’s response is ignored.
+report_error
+When the bot server fails to use the protocol correctly (e.g., when it uses the wrong types in response to a
+settings
+request, the Poe server may make a
+report_error
+request to the server that reports what went wrong. The protocol does not guarantee that the endpoint will be called for every error; it is merely intended as a convenience to help bot server creators debug their bot.
+This request takes the following additional parameters:
+message
+(string): A string describing the error.
+metadata
+(dictionary): May contain metadata that may be helpful in diagnosing the error, such as the
+conversation_id
+for the conversation. The exact contents of the dictionary are not specified and may change at any time.
+Response
+The server’s response is ignored.
+Samples
+Suppose we’re having the above conversation over Poe with a bot server running at
+https://ai.example.com/llm
+.
+For the Poe conversation above, the Poe server sends a POST request to
+https://ai.example.com/llm
+with the following JSON in the body:
+JSON
+{
+    "version": "1.0",
+    "type": "query",
+    "query": [
+        {
+            "role": "user",
+            "content": "What is the capital of Nepal?",
+            "content_type": "text/markdown",
+            "timestamp": 1678299819427621,
+        }
+    ],
+    "user": "u-1234abcd5678efgh",
+    "conversation": "c-jklm9012nopq3456",
+}
+The bot server responds with an HTTP 200 response code, then sends the following server-sent events:
+JSON
+event: meta
+data: {"content_type": "text/markdown", "linkify": true}
+
+event: text
+data: {"text": "The"}
+
+event: text
+data: {"text": " capital of Nepal is"}
+
+event: text
+data: {"text": " Kathmandu."}
+
+event: done
+data: {}
+The text may also be split into more or fewer individual events as desired. Sending more events means that users will see partial responses from the bot server faster.
+Next steps
+Check out our
+quick start
+to promptly get a bot running.
+fastapi-poe
+, a library for building Poe bots using the FastAPI framework. We recommend using this library if you are building your own bot.
+Example Bots
+Updated
+3 months ago
+Table of Contents
+Introduction
+Terminology
+Concepts
+Identifiers
+Authentication
+Content types
+Versioning
+Limits
+Requests
+query
+settings
+report_feedback
+report_error
+Samples
+Next steps
+
+Example bots
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Example bots
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Example bots
+These bots are all server bots built on the API. You can try each of them live in Poe by clicking the link.
+Web search
+This bot conducts web searches and then uses
+GPT-4o Mini
+via the
+bot query API
+to write an answer informed by the searches. This bot is an official bot operated by Poe, built entirely on the same API we make available to creators.
+Mixtral-8x7B-Chat
+Created by
+Fireworks
+, this bot provides access to
+Mixtral 8x7B Mixture-of-Experts
+.
+StableDiffusionXL
+This bot uses SDXL to generate an image for the user based on their prompt.
+PythonAgent
+Code interpreter with ChatGPT. Supports files upload, file persistence, automatic code re-execution and matplotlib image output.
+Source code:
+https://github.com/tonghuikang/server-bot-quick-start/blob/main/bot_PythonAgent.py
+Updated
+about 17 hours ago
+
+Creator Monetization
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Creator Monetization
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Creator Monetization
+The creator monetization program lets Poe bot creators get paid. See program details on the
+creator monetization program page
+. Check the
+Creators page
+for updates.
+If for any reason the above program does not meet your needs as a developer, please reach out to us at
+[email protected]
+.
+We can work out custom arrangements.
+Updated
+6 months ago
+
+How we cover your costs
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+How we cover your costs
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+How we cover your costs
+Our intent is to cover all model inference costs and any other significant per-message costs involved in operating any bot on Poe. There are two ways this can happen at present:
+If you use the
+bot query API
+, then the cost of any model inference used by any bot you query will be automatically covered by Poe.
+This is the easiest option and should be used whenever possible. If you are using a standard base model that is available via a bot on Poe and there is a reason this option does not work for your use case, please
+get in contact with us
+.
+If you want to use a model that is not currently available on Poe (and therefore not available through the bot query API), we can work with you to pay your model inference costs. Depending on how expensive they are, we may need to restrict availability to your bot to Poe subscribers only, or to limit the number of messages per day that users can send to it.
+If this is a fine-tuned version of a standard open source model, this will generally involve hosting the model on an inference provider like Fireworks, Together, or Replicate, and giving us visibility into the cost per token or per item.
+If you are training your own model from scratch and hosting your own inference, we can discuss how we can best cover inference costs.
+Please
+contact us
+for more information about either of the above options.
+If there is some other especially expensive input to your bot (e.g. use of a web search API), we can likely cover that as well.
+Updated
+7 months ago
+
+How to get distribution
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+How to get distribution
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+How to get distribution
+Distribution within Poe
+In order for a bot to be recommended to other users by Poe, it needs to have a profile picture and a description. You can edit these on the Edit bot screen. The more likely people are to use your bot and continue to use it over time, the more likely Poe will be to recommend it.
+Distribution outside Poe
+Your bot will be available to everyone at poe.com/<handle>. You can recommend your bot to your friends or followers on other platforms by sharing the link, or by telling them to go to Poe and search for the bot's handle. The more people you drive to your bot from outside of Poe, the more likely Poe will be to recommend it on-platform.
+Official bot status
+If you are providing a bot with an established brand, for example if you are hosting inference of a specific open source model, or if you have a company incorporated with a registered trademark, we can consider marking your bot as official. This process will include signing a contract with Poe that provides some additional guarantees around treatment of user data and reliability. Let us know if you are interested at
+[email protected]
+.
+Updated
+6 months ago
+Table of Contents
+Distribution within Poe
+Distribution outside Poe
+Official bot status
+
+Fundraising
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Fundraising
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Fundraising
+We maintain a list of investors who have told us they are interested in funding companies building AI products that are integrated into Poe as bots. This includes GPs at 8 top-tier Silicon Valley venture firms like Benchmark Capital and Nat Friedman and Daniel Gross. We have already assisted two companies that operate Poe bots in raising millions of dollars and hope to support many more.
+If you are a Poe creator with meaningful usage and you are raising money, at your request (and only with your permission) we will email the list and broker connections to any interested investors. Please reach out to us at
+[email protected]
+if you'd like us to help.
+If you are a venture firm or an angel investor and would like to join the list, please let us know at
+[email protected]
+.
+Updated
+6 months ago
+
+Frequently asked questions
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Frequently asked questions
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Frequently asked questions
+1. Can I monetize my bot through alternative means not supported by the platform?
+Yes, you are welcome to monetize your bot through alternative means which include, but are not limited to, placing ads in your content or asking users to visit your website to make donations or payments.
+2. Will Poe use my bot's responses to train its own LLMs?
+No, we will not use the responses from your bot to train LLMs, nor will we provide your bot's responses to any third party unless we have an agreement in place to prevent the use of responses for this purpose. This is specified in our
+API terms
+in section 4.c.
+3. How do I report a bug?
+See
+How to contact us
+.
+4. How do I get help with any other issue that comes up?
+See
+How to contact us
+.
+Updated
+6 months ago
+Table of Contents
+1. Can I monetize my bot through alternative means not supported by the platform?
+2. Will Poe use my bot's responses to train its own LLMs?
+3. How do I report a bug?
+4. How do I get help with any other issue that comes up?
+
+How to contact us
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+How to contact us
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+How to contact us
+Please join us on
+Discord
+, or email us at
+[email protected]
+with any questions or feedback.
+If you are a company, or if you are an individual developer with a large amount of bot usage, we can also set up a shared Slack channel for easier collaboration. Please email us at
+[email protected]
+if you are interested in this.
+Updated
+6 months ago
+
+ReadMe
+Features
+Enterprise
+Pricing
+Learn
+Company
+Log In
+Sign Up
+Developer hubs that
+meet your users where they are
+ReadMe transforms your API docs into interactive hubs that help developers succeed.
+Get Started
+or
+Request a Demo
+Trusted by more than 6,000 leading developer experience teams
+DOCS-AS-PRODUCT
+Behind every API call is an API user.
+So why do your docs treat them all the same?
+200
+400
+300
+300
+Owlivia
+First Call:
+12/1/2021
+Error Rate:
++13%
+Success Rate:
++87%
+Owlbert
+First Call:
+12/4/2021
+Error Rate:
++45%
+Success Rate:
++55%
+Owlejandro
+First Call:
+11/28/2021
+Error Rate:
++24%
+Success Rate:
++76%
+ReadMe transforms static API documentation into
+real-time, interactive developer hubs.
+Developer Onboarding
+Ongoing Guidance
+Usage Insights
+More features
+Public & Private Hubs
+OpenAPI Sync
+GraphQL Support
+“Try it” API Playground
+Code Snippet Builder
+Suggested Edits
+Versioning
+Unified Navigation
+Branding Control
+Content Widgets & Markdown
+Native Search
+Page Views & Ratings
+Real-time API Logs
+User Metrics
+Changelog
+Discussion Forums
+API USER JOURNEY
+A better experience for
+your
+developers
+at every step
+Faster
+“Time to First Call”
+when just getting started.
+Devs can explore what’s possible in your guides, then dive right into the Try It playground to make their first call in a snap.
+API Key Created
+200
+First Call Made
+200
+LANGUAGE
+cURL
+Node.js
+Ruby
+JavaScript
+Python
+AUTHENTICATION
+API KEY
+REQUEST
+Examples
+1
+curl
+--request GET \
+2
+--url 'https://api.hoot.owl/v1/get-owlet' \
+3
+--header
+'Authorization: Bearer
+'
+\
+4
+--header
+'x-owl-version: v1'
+Try It!
+Get on the same page
+when things go wrong.
+Shareable API request logs make it easy for everyone to understand the issue and quickly troubleshoot.
+400
+400
+401
+Create Owlet
+post
+https://api.hoot.owl/v1/create-owlet
+STATUS
+PATH
+UA
+TIME
+200
+/v1/create-owlet
+Try It!
+2/23/22 12:22 AM
+400
+/v1/create-owlet
+Try It!
+2/23/22 01:20 AM
+400
+/v1/create-owlet
+Try It!
+2/23/22 01:20 AM
+300
+/v1/create-owlet
+Try It!
+2/23/22 01:10 AM
+200
+/v1/create-owlet
+Try It!
+2/22/22 11:58 PM
+200
+/v1/create-owlet
+Try It!
+2/22/22 11:58 PM
+400
+/v1/create-owlet
+Try It!
+2/23/22 01:30 AM
+400
+/v1/create-owlet
+Try It!
+2/23/22 01:20 AM
+300
+/v1/create-owlet
+Try It!
+2/23/22 01:10 AM
+200
+/v1/create-owlet
+Try It!
+2/23/22 12:22 AM
+200
+/v1/create-owlet
+Try It!
+2/23/22 12:20 AM
+200
+/v1/create-owlet
+Try It!
+2/22/22 11:58 PM
+Expand
+SHARE THIS REQUEST
+https://ports.readme.com/refs?shareURL=
+101
+Make the right updates with
+data-driven insights.
+Understand API usage and how that’s changing over time, so your team can focus on the highest impact improvements.
+300
+Endpoints
++32%
+2,984
+Total Requests
+/api/v1/categories/{slug}
+/api/v1/categories
+/api/v1/docs/{slug}
+/api/v1/
+/api/v1/docs/errors
+/api/v1/categories/{slug}
+/api/v1/categories
+/api/v1/docs/{slug}
+/api/v1/
+/api/v1/docs/errors
+/changelogs
+/docs
+/api-specification
+Keep users in the loop
+on the latest and greatest.
+Help users take advantage of the latest updates and prevent breaking changes before they happen.
+200
+1
+3
+ANSWERED
+How can I link an image on a custom page?
+On a custom page, it’s possible to add an image…
+Posted by Sonia about 2 hours ago
+Everything you need to
+build the best developer hubs
+Documentation
+Easy-to-edit guides to help developers get started
+Metrics
+Real-time API logs for troubleshooting and insights
+Community
+Changelog and more to keep users in the loop
+300
+README AT SCALE
+Enterprise
+Manage multiple APIs in one hub and unlock advanced permissions with ReadMe Enterprise.
+Explore Enterprise
+300
+200
+Staged Changes
+Added Project
+Staging Live
+Join the 6,000+ companies putting developer experience first
+Learn more
+Ready for a
+developer hub
+developers love?
+Sign up for a free 14 day trial of the full platform. Your API Reference is free forever.
+Get Started
+or
+Request a Demo
+s
+200
+200
+200
+PRODUCT
+Docs
+Developer Dashboard
+Community
+Enterprise
+Pricing
+RESOURCES
+Customer Stories
+Resource Library
+ReadMe Blog
+ReadMe Docs
+COMPANY
+Team
+Join our Slack
+Contact Support
+Terms of Service
+Privacy Policy
+MSA
+
+Poe Creator Guide
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Poe Creator Guide
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Poe Creator Guide
+Poe is a platform for people to discover and chat with AI-powered bots. Poe allows any individual or business to create new bots.
+Reasons to create a bot on Poe
+Distribution
+: Poe's bot recommendation system allows you to reach a large audience for your bot for free. Users can also conveniently share a chat with your bot both internally on Poe and externally, leading to even more exposure for your bot.
+Monetization
+: Poe lets you easily
+generate revenue
+from users all around the world. You can set a price per message that you'll be paid for every message to your bot, and you can also get referral fees when your bot causes new users to subscribe to Poe. As of August 2024, the top self-service creator on Poe is generating hundreds of thousands in annualized revenue, and larger companies are generating millions.
+Costs
+: Operating a publicly available bot powered by large language models is prohibitively expensive for most, but creating a bot on Poe allows you to
+offload model inference costs entirely to Poe
+.
+Multi-platform UI
+: Poe's native presence on all major platforms (Web, iOS, Android, MacOS, and Windows) means that your users have a great, consistent experience with your bot no matter what device they are on, with login and synchronized history taken care of by the platform.
+Model independence
+: Building on Poe lets you build your product using models from all different providers (OpenAI, Anthropic, Google, and more, and open source models like Mistral, Llama 2 or SDXL). Poe is a neutral platform and so by building here, you can continually adapt your product use any combination of the best technologies as they are created, no matter who each one is made by.
+Fundraising
+: If your product gets meaningful usage on Poe, that is an important signal to potential investors. We maintain a list of high quality investors who have told us they are interested in hearing about successful developers that are raising money and, with your permission, we will email them and broker connections. (
+details
+)
+In summary, Poe lets creators focus entirely on the unique part of their bot: how it will respond. The platform handles everything else needed to bring it to a large audience, to operate it at scale, and to build a business.
+Ways to create a bot on Poe
+We provide two different creator products and depending on your needs and use case, one or the other might be a better fit for you.
+Prompt bots
+are bots built on top of other bots (for example Claude-instant, GPT-4, or Llama 2) using plain-text instructions that the bot will stick to during conversation with users. Creating a prompt bot does not require writing any code, just natural language instructions. To learn how to build a prompt bot, check out our
+prompt bot tutorial
+.
+Server bots
+are bots powered by a custom backend that runs your code in response to every user message. In addition, building a server bot with Poe allows you to call any other bot (like GPT-3.5-Turbo, Claude-instant, or any prompt bot) on Poe for free, which can significantly enhance the capabilities of your bot without you having to incur a large cost. To learn how to build a server bot, check out our
+quick start
+.
+Updated
+about 1 month ago
+Table of Contents
+Reasons to create a bot on Poe
+Ways to create a bot on Poe
+
+Creator Monetization
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Creator Monetization
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Creator Monetization
+The creator monetization program lets Poe bot creators get paid. See program details on the
+creator monetization program page
+. Check the
+Creators page
+for updates.
+If for any reason the above program does not meet your needs as a developer, please reach out to us at
+[email protected]
+.
+We can work out custom arrangements.
+Updated
+6 months ago
+
+How we cover your costs
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+How we cover your costs
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+How we cover your costs
+Our intent is to cover all model inference costs and any other significant per-message costs involved in operating any bot on Poe. There are two ways this can happen at present:
+If you use the
+bot query API
+, then the cost of any model inference used by any bot you query will be automatically covered by Poe.
+This is the easiest option and should be used whenever possible. If you are using a standard base model that is available via a bot on Poe and there is a reason this option does not work for your use case, please
+get in contact with us
+.
+If you want to use a model that is not currently available on Poe (and therefore not available through the bot query API), we can work with you to pay your model inference costs. Depending on how expensive they are, we may need to restrict availability to your bot to Poe subscribers only, or to limit the number of messages per day that users can send to it.
+If this is a fine-tuned version of a standard open source model, this will generally involve hosting the model on an inference provider like Fireworks, Together, or Replicate, and giving us visibility into the cost per token or per item.
+If you are training your own model from scratch and hosting your own inference, we can discuss how we can best cover inference costs.
+Please
+contact us
+for more information about either of the above options.
+If there is some other especially expensive input to your bot (e.g. use of a web search API), we can likely cover that as well.
+Updated
+7 months ago
+
+Fundraising
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Fundraising
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Fundraising
+We maintain a list of investors who have told us they are interested in funding companies building AI products that are integrated into Poe as bots. This includes GPs at 8 top-tier Silicon Valley venture firms like Benchmark Capital and Nat Friedman and Daniel Gross. We have already assisted two companies that operate Poe bots in raising millions of dollars and hope to support many more.
+If you are a Poe creator with meaningful usage and you are raising money, at your request (and only with your permission) we will email the list and broker connections to any interested investors. Please reach out to us at
+[email protected]
+if you'd like us to help.
+If you are a venture firm or an angel investor and would like to join the list, please let us know at
+[email protected]
+.
+Updated
+6 months ago
+
+Poe Creator Guide
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Poe Creator Guide
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Poe Creator Guide
+Poe is a platform for people to discover and chat with AI-powered bots. Poe allows any individual or business to create new bots.
+Reasons to create a bot on Poe
+Distribution
+: Poe's bot recommendation system allows you to reach a large audience for your bot for free. Users can also conveniently share a chat with your bot both internally on Poe and externally, leading to even more exposure for your bot.
+Monetization
+: Poe lets you easily
+generate revenue
+from users all around the world. You can set a price per message that you'll be paid for every message to your bot, and you can also get referral fees when your bot causes new users to subscribe to Poe. As of August 2024, the top self-service creator on Poe is generating hundreds of thousands in annualized revenue, and larger companies are generating millions.
+Costs
+: Operating a publicly available bot powered by large language models is prohibitively expensive for most, but creating a bot on Poe allows you to
+offload model inference costs entirely to Poe
+.
+Multi-platform UI
+: Poe's native presence on all major platforms (Web, iOS, Android, MacOS, and Windows) means that your users have a great, consistent experience with your bot no matter what device they are on, with login and synchronized history taken care of by the platform.
+Model independence
+: Building on Poe lets you build your product using models from all different providers (OpenAI, Anthropic, Google, and more, and open source models like Mistral, Llama 2 or SDXL). Poe is a neutral platform and so by building here, you can continually adapt your product use any combination of the best technologies as they are created, no matter who each one is made by.
+Fundraising
+: If your product gets meaningful usage on Poe, that is an important signal to potential investors. We maintain a list of high quality investors who have told us they are interested in hearing about successful developers that are raising money and, with your permission, we will email them and broker connections. (
+details
+)
+In summary, Poe lets creators focus entirely on the unique part of their bot: how it will respond. The platform handles everything else needed to bring it to a large audience, to operate it at scale, and to build a business.
+Ways to create a bot on Poe
+We provide two different creator products and depending on your needs and use case, one or the other might be a better fit for you.
+Prompt bots
+are bots built on top of other bots (for example Claude-instant, GPT-4, or Llama 2) using plain-text instructions that the bot will stick to during conversation with users. Creating a prompt bot does not require writing any code, just natural language instructions. To learn how to build a prompt bot, check out our
+prompt bot tutorial
+.
+Server bots
+are bots powered by a custom backend that runs your code in response to every user message. In addition, building a server bot with Poe allows you to call any other bot (like GPT-3.5-Turbo, Claude-instant, or any prompt bot) on Poe for free, which can significantly enhance the capabilities of your bot without you having to incur a large cost. To learn how to build a server bot, check out our
+quick start
+.
+Updated
+about 1 month ago
+Table of Contents
+Reasons to create a bot on Poe
+Ways to create a bot on Poe
+
+How to create a prompt bot
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+How to create a prompt bot
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+How to create a prompt bot
+Step 1: Open the create bot page
+If you are using a web browser, go to
+poe.com
+and click on the "Create a bot" button in the left sidebar. Alternatively you can navigate directly to
+poe.com/create_bot
+. If you are using the Poe mobile app, tap the ≡ icon the top-left to open the sidebar and then tap on the "Create a bot" button at the top of the menu.
+Step 2: Customize how your bot will look
+Upload a picture (Optional)
+This helps give your bot a distinctive appearance.
+Select a bot name
+The name is a unique identifier and can be 4-20 characters, including letters, numbers, dashes, periods and underscores.[Symbols are canonicalized, e.g. Bot_A, BotA and Bot-A are considered the same identifier.] The field will come prefilled with a randomly generated name that you can leave as it is. You can always come back and update the name later.
+Write a bot description (Optional)
+A piece of text that describes your bot. This will be shown to people who land on the bot page.
+Step 3: Define your bot's behavior
+Select a base bot
+This is the underlying bot that your prompt bot is powered by.
+Provide a prompt
+Describe what your bot should do or how it should behave. For more information on how to write a good prompt, check out
+prompts best practices
+guide. You can also use the "Prompt visible from bot profile" option to decide whether your prompt should be visible to the public.
+Provide a knowledge base (Optional)
+For text generation bots, you can add a knowledge base to provide external information for your bot to reference. Your bot will retrieve relevant parts of the knowledge base for a given user message and use them to inform its response.
+A knowledge base consists of one or more knowledge sources which are created from uploaded files or raw text input. Major text file formats (such as .txt, .pdf, .docx, and .html) are supported for file uploads. The size of each knowledge base is limited to 5GB or 30 million characters combined across all knowledge sources.
+You can optionally enable "Cite sources" for your bot. This will enable citation UI elements for your bot in addition to instructing the bot to produce in-line citations when appropriate.
+Provide a greeting message (Optional)
+This is the message that the bot starts with when users land on the bot page. This can be used to explain to the users what the bot does or get necessary information that the bot needs to get started.
+Step 4: Decide if you need any advanced features (Optional)
+Suggest replies
+Whether a user should see some LLM-generated reply options after getting a response from the bot. This could help in lowering friction for users if the option is a good fit for your bot.
+Render markdown content
+Allows messages with the bot to be rendered using Markdown. If this is off, messages are rendered as plain text.
+Poe supports GitHub-Flavored Markdown (GFM, specified at
+https://github.github.com/gfm/
+). However, for security and privacy reasons, prompt bots only support images hosted at imgur.com and unsplash.com. Images that use any other URL will fail to render. Please reach out to us on
+Discord
+if you wish to make a request for us to support additional image hosting sites.
+Custom temperature
+Allows you to specify the temperature you want to use for your bot. Higher temperatures will introduce more randomness in your bot's responses. Lower temperatures will produce more consistent results, which can be useful for fact-based bots (especially those equipped with a knowledge base).
+Step 5: Create your bot
+After filling out all the required fields, click on the "Create bot" button at the bottom of the screen. That's it! You will be taken to your new bot's page, and from there you can start chatting or share the bot with your friends.
+Updated
+about 2 months ago
+Table of Contents
+Step 1: Open the create bot page
+Step 2: Customize how your bot will look
+Step 3: Define your bot's behavior
+Step 4: Decide if you need any advanced features (Optional)
+Step 5: Create your bot
+
+Quick Start
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Quick Start
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Quick Start
+In this quick start guide, we will build a bot server in Python and then integrate it with Poe. Once you have created a Poe bot powered by your server, any Poe user can interact with it. The following diagram might be useful in visualizing how your bot server fits into Poe.
+For more information on Poe server bots, check out the
+Poe Protocol Specification
+.
+Step 1: Project Setup
+Make sure you have Python installed. In your terminal, run:
+git clone https://github.com/poe-platform/server-bot-quick-start
+cd server-bot-quick-start
+pip3 install -r requirements.txt
+Inside the
+server-bot-quick-start
+project directory, you will see several different example server bots. For this guide, we will focus on
+echobot.py
+. Open that file in your editor, and we will move onto the next step,
+Deploying Your Bot
+.
+Step 2: Deploying your Bot
+📘
+Using Modal
+We recommend using
+Modal
+to deploy your
+echobot.py
+, but you can use any deployment method of your choice. If you already deployed your bot to a public URL, you can skip to
+integrating it with Poe
+.
+Install the Modal client
+Open a terminal and run
+pip3 install modal
+Setup your Modal token
+This step involves setting up access to modal from your terminal. You only need to do this once for your computer. In the terminal, run
+modal token new --source poe
+. If you run into a "command not found" error, try
+this
+.
+If that command runs successfully, you will taken to your web browser where you will be asked to log into modal using your Github account.
+After you login, click on "create token". You will be prompted to close the browser window after that.
+Deploy to Modal
+In terminal, run the following command from your
+server-bot-quick-start
+directory:
+modal serve echobot.py
+📘
+modal serve
+modal serve
+deploys an ephemeral version of your app which
+live updates in response to any code change to echobot.py
+. This is meant for development purposes, and your app will shutdown when the command stops running. Once your app is ready for production,  you can use
+modal deploy
+instead to persist your app.
+In the terminal output, you should see the endpoint your application is deployed at. You will need this URL for the next step,
+Integrating with Poe
+.
+Step 3: Integrating with Poe
+Navigate to the
+Bot Creation Page
+on poe.com and select
+Server bot
+as the bot type. That should bring you to the following form:
+Fill out your bot details, copying down the bot
+Name
+(you can edit this if you'd like) and the generated
+Access Key
+. You will need these two values in the next step. Paste the URL from the previous step into
+Server URL
+. Hit
+Create Bot
+to finish the bot creation.
+🚧
+Warning
+Don't forget to update the Server URL if the endpoint your bot is hosted at changes! Generally, Modal seems to re-use the same URL on each deployment, but if you are having trouble sending messages to your bot, you should verify that the URL is correct.
+Configuring the Access Credentials
+Near the bottom of
+echobot.py
+, you should see the following line:
+Python
+app = fp.make_app(bot, allow_without_key=True)
+Change that line to the following (replace
+<YOUR_ACCESS_KEY>
+and
+<YOUR_BOT_NAME>
+with the values you copied in the previous step):
+Python
+app = fp.make_app(bot, access_key=<YOUR_ACCESS_KEY>, bot_name=<YOUR_BOT_NAME>)
+Now your bot is configured with the proper credentials! Save the changes to
+echobot.py
+, and Modal should pick up and deploy the changes. That's it! You should be able to talk to your bot on Poe.
+Where to go from here
+One of the advantages of building a bot on Poe is the ability to invoke other Poe bots. In order to learn how to do that check out:
+accessing-other-bots-on-poe.md
+.
+Check out other detailed guides that show you how to enable specific features:
+rendering-an-image-in-the-response.md
+enabling-file-upload-for-your-bot.md
+setting-an-introduction-message.md
+Refer to the
+specification
+to understand the full capabilities offered by Poe server bots.
+Check out the
+fastapi-poe
+library, which you can use as a base for creating Poe bots.
+Updated
+4 days ago
+Table of Contents
+Step 1: Project Setup
+Step 2: Deploying your Bot
+Install the Modal client
+Setup your Modal token
+Deploy to Modal
+Step 3: Integrating with Poe
+Configuring the Access Credentials
+Where to go from here
+
+Poe Creator Guide
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Poe Creator Guide
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Poe Creator Guide
+Poe is a platform for people to discover and chat with AI-powered bots. Poe allows any individual or business to create new bots.
+Reasons to create a bot on Poe
+Distribution
+: Poe's bot recommendation system allows you to reach a large audience for your bot for free. Users can also conveniently share a chat with your bot both internally on Poe and externally, leading to even more exposure for your bot.
+Monetization
+: Poe lets you easily
+generate revenue
+from users all around the world. You can set a price per message that you'll be paid for every message to your bot, and you can also get referral fees when your bot causes new users to subscribe to Poe. As of August 2024, the top self-service creator on Poe is generating hundreds of thousands in annualized revenue, and larger companies are generating millions.
+Costs
+: Operating a publicly available bot powered by large language models is prohibitively expensive for most, but creating a bot on Poe allows you to
+offload model inference costs entirely to Poe
+.
+Multi-platform UI
+: Poe's native presence on all major platforms (Web, iOS, Android, MacOS, and Windows) means that your users have a great, consistent experience with your bot no matter what device they are on, with login and synchronized history taken care of by the platform.
+Model independence
+: Building on Poe lets you build your product using models from all different providers (OpenAI, Anthropic, Google, and more, and open source models like Mistral, Llama 2 or SDXL). Poe is a neutral platform and so by building here, you can continually adapt your product use any combination of the best technologies as they are created, no matter who each one is made by.
+Fundraising
+: If your product gets meaningful usage on Poe, that is an important signal to potential investors. We maintain a list of high quality investors who have told us they are interested in hearing about successful developers that are raising money and, with your permission, we will email them and broker connections. (
+details
+)
+In summary, Poe lets creators focus entirely on the unique part of their bot: how it will respond. The platform handles everything else needed to bring it to a large audience, to operate it at scale, and to build a business.
+Ways to create a bot on Poe
+We provide two different creator products and depending on your needs and use case, one or the other might be a better fit for you.
+Prompt bots
+are bots built on top of other bots (for example Claude-instant, GPT-4, or Llama 2) using plain-text instructions that the bot will stick to during conversation with users. Creating a prompt bot does not require writing any code, just natural language instructions. To learn how to build a prompt bot, check out our
+prompt bot tutorial
+.
+Server bots
+are bots powered by a custom backend that runs your code in response to every user message. In addition, building a server bot with Poe allows you to call any other bot (like GPT-3.5-Turbo, Claude-instant, or any prompt bot) on Poe for free, which can significantly enhance the capabilities of your bot without you having to incur a large cost. To learn how to build a server bot, check out our
+quick start
+.
+Updated
+about 1 month ago
+Table of Contents
+Reasons to create a bot on Poe
+Ways to create a bot on Poe
+
+Poe Creator Guide
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Poe Creator Guide
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Poe Creator Guide
+Poe is a platform for people to discover and chat with AI-powered bots. Poe allows any individual or business to create new bots.
+Reasons to create a bot on Poe
+Distribution
+: Poe's bot recommendation system allows you to reach a large audience for your bot for free. Users can also conveniently share a chat with your bot both internally on Poe and externally, leading to even more exposure for your bot.
+Monetization
+: Poe lets you easily
+generate revenue
+from users all around the world. You can set a price per message that you'll be paid for every message to your bot, and you can also get referral fees when your bot causes new users to subscribe to Poe. As of August 2024, the top self-service creator on Poe is generating hundreds of thousands in annualized revenue, and larger companies are generating millions.
+Costs
+: Operating a publicly available bot powered by large language models is prohibitively expensive for most, but creating a bot on Poe allows you to
+offload model inference costs entirely to Poe
+.
+Multi-platform UI
+: Poe's native presence on all major platforms (Web, iOS, Android, MacOS, and Windows) means that your users have a great, consistent experience with your bot no matter what device they are on, with login and synchronized history taken care of by the platform.
+Model independence
+: Building on Poe lets you build your product using models from all different providers (OpenAI, Anthropic, Google, and more, and open source models like Mistral, Llama 2 or SDXL). Poe is a neutral platform and so by building here, you can continually adapt your product use any combination of the best technologies as they are created, no matter who each one is made by.
+Fundraising
+: If your product gets meaningful usage on Poe, that is an important signal to potential investors. We maintain a list of high quality investors who have told us they are interested in hearing about successful developers that are raising money and, with your permission, we will email them and broker connections. (
+details
+)
+In summary, Poe lets creators focus entirely on the unique part of their bot: how it will respond. The platform handles everything else needed to bring it to a large audience, to operate it at scale, and to build a business.
+Ways to create a bot on Poe
+We provide two different creator products and depending on your needs and use case, one or the other might be a better fit for you.
+Prompt bots
+are bots built on top of other bots (for example Claude-instant, GPT-4, or Llama 2) using plain-text instructions that the bot will stick to during conversation with users. Creating a prompt bot does not require writing any code, just natural language instructions. To learn how to build a prompt bot, check out our
+prompt bot tutorial
+.
+Server bots
+are bots powered by a custom backend that runs your code in response to every user message. In addition, building a server bot with Poe allows you to call any other bot (like GPT-3.5-Turbo, Claude-instant, or any prompt bot) on Poe for free, which can significantly enhance the capabilities of your bot without you having to incur a large cost. To learn how to build a server bot, check out our
+quick start
+.
+Updated
+about 1 month ago
+Table of Contents
+Reasons to create a bot on Poe
+Ways to create a bot on Poe
+
+Poe Creator Guide
+Jump to Content
+Guides
+Changelog
+v
+1.0
+Log In
+Guides
+Log In
+Moon (Dark Mode)
+Sun (Light Mode)
+v
+1.0
+Guides
+Changelog
+Poe Creator Guide
+Search
+getting started
+Poe Creator Guide
+Prompt Bots
+How to create a prompt bot
+Best practices for text generation prompts
+Best practices for image generation prompts
+Best practices for video generation prompts
+Server bots
+Quick Start
+Functional Guides
+Recommended bot settings
+fastapi_poe: Python API Reference
+Poe Protocol Specification
+Example bots
+Resources
+Creator Monetization
+How we cover your costs
+How to get distribution
+Fundraising
+Frequently asked questions
+How to contact us
+Powered by
+Poe Creator Guide
+Poe is a platform for people to discover and chat with AI-powered bots. Poe allows any individual or business to create new bots.
+Reasons to create a bot on Poe
+Distribution
+: Poe's bot recommendation system allows you to reach a large audience for your bot for free. Users can also conveniently share a chat with your bot both internally on Poe and externally, leading to even more exposure for your bot.
+Monetization
+: Poe lets you easily
+generate revenue
+from users all around the world. You can set a price per message that you'll be paid for every message to your bot, and you can also get referral fees when your bot causes new users to subscribe to Poe. As of August 2024, the top self-service creator on Poe is generating hundreds of thousands in annualized revenue, and larger companies are generating millions.
+Costs
+: Operating a publicly available bot powered by large language models is prohibitively expensive for most, but creating a bot on Poe allows you to
+offload model inference costs entirely to Poe
+.
+Multi-platform UI
+: Poe's native presence on all major platforms (Web, iOS, Android, MacOS, and Windows) means that your users have a great, consistent experience with your bot no matter what device they are on, with login and synchronized history taken care of by the platform.
+Model independence
+: Building on Poe lets you build your product using models from all different providers (OpenAI, Anthropic, Google, and more, and open source models like Mistral, Llama 2 or SDXL). Poe is a neutral platform and so by building here, you can continually adapt your product use any combination of the best technologies as they are created, no matter who each one is made by.
+Fundraising
+: If your product gets meaningful usage on Poe, that is an important signal to potential investors. We maintain a list of high quality investors who have told us they are interested in hearing about successful developers that are raising money and, with your permission, we will email them and broker connections. (
+details
+)
+In summary, Poe lets creators focus entirely on the unique part of their bot: how it will respond. The platform handles everything else needed to bring it to a large audience, to operate it at scale, and to build a business.
+Ways to create a bot on Poe
+We provide two different creator products and depending on your needs and use case, one or the other might be a better fit for you.
+Prompt bots
+are bots built on top of other bots (for example Claude-instant, GPT-4, or Llama 2) using plain-text instructions that the bot will stick to during conversation with users. Creating a prompt bot does not require writing any code, just natural language instructions. To learn how to build a prompt bot, check out our
+prompt bot tutorial
+.
+Server bots
+are bots powered by a custom backend that runs your code in response to every user message. In addition, building a server bot with Poe allows you to call any other bot (like GPT-3.5-Turbo, Claude-instant, or any prompt bot) on Poe for free, which can significantly enhance the capabilities of your bot without you having to incur a large cost. To learn how to build a server bot, check out our
+quick start
+.
+Updated
+about 1 month ago
+Table of Contents
+Reasons to create a bot on Poe
+Ways to create a bot on Poe
+

@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  doc-scraper:
+    build: .
+    container_name: doc_scraper_container
+    volumes:
+      - .:/app
+    environment:
+      - OPENAI_API_KEY=your_openai_api_key_here
+    command: python run_all.py
